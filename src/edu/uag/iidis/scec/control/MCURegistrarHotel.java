@@ -93,25 +93,25 @@ public final class MCURegistrarHotel
             folder.mkdir();
         }
         FormaNuevoHotel forma = (FormaNuevoHotel)form;
-        FormFile file = forma.getImagen();
+        //FormFile file = forma.getImagen();
         
-        System.out.println("imagen --- " + file == null);
 
-        String fileName = file.getFileName();
-        File newFile =  null;
-        if(!("").equals(fileName)){
-
-            newFile = new File(filePath, fileName);
-
-            if(!newFile.exists()){
-              FileOutputStream fos = new FileOutputStream(newFile);
-              fos.write(file.getFileData());
-              fos.flush();
-              fos.close();
-            }
-        }else {
-          fileName = "hotel001.jpg";
-        }
+//        String fileName = file.getFileName();
+//        File newFile =  null;
+//        if(!("").equals(fileName)){
+//
+//            newFile = new File(filePath, fileName);
+//
+//            if(!newFile.exists()){
+//              FileOutputStream fos = new FileOutputStream(newFile);
+//              fos.write(file.getFileData());
+//              fos.flush();
+//              fos.close();
+//            }
+//        }else {
+//          
+//        }
+        String fileName = "imagenes/hotel.jpg";
         Hotel hotel = new Hotel(forma.getNombre(),
                           forma.getDescripcion(),forma.getPrecio(),forma.getHorario(),forma.getEstado(),fileName,forma.getPais(),forma.getDireccion());
 
