@@ -1,0 +1,45 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="edu.uag.iidis.scec.modelo.Acceso"
+           table="Usuarios"
+           dynamic-update="false"
+           dynamic-insert="false">
+
+        <id name="id"
+            column="idUsuario"
+            type="java.lang.Long"
+            unsaved-value="null" >
+            <generator class="increment">
+            </generator>
+        </id>
+
+        <property name="nombre"
+            column="nombreNombre"
+			type="java.lang.String"
+            not-null="true"
+            unique="true" />
+
+        <property name="apellidoPaterno"
+			column="nombreApellidoPaterno"
+            type="java.lang.String" />
+
+		<property name="apellidoMaterno"
+			column="nombreApellidoMaterno"
+            type="java.lang.String" />
+
+		<property name="nombrePrefijo"
+			column="nombrePrefijo"
+            type="java.lang.String"/>
+
+		<property name="nombreUsuario"
+			column="nombreUsuario"
+            type="java.lang.String"/>
+             <!--cambios-->
+        <property name="claveAcceso"
+        column="claveAcceso"
+        type="java.lang.String"/>
+
+    </class>
+
+</hibernate-mapping>

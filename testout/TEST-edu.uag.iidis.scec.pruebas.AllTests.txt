@@ -1,0 +1,611 @@
+Testsuite: edu.uag.iidis.scec.pruebas.AllTests
+Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.197 sec
+------------- Standard Output ---------------
+[SCEC] 2017-04-07 11:10:45,689 DEBUG edu.uag.iidis.scec.persistencia.UsuarioDAO.buscarPorId(33) : >buscarPorID(1, false)
+[SCEC] 2017-04-07 11:10:45,694 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.<clinit>(69) : >creando sessionFactory
+[SCEC] 2017-04-07 11:10:47,547 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:47,547 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(167) : -Abriendo una nueva sesión para el thread.
+Hibernate: select usuario0_.idUsuario as idUsuario0_0_, usuario0_.nombrePrefijo as nombrePr2_0_0_, usuario0_.nombreNombre as nombreNo3_0_0_, usuario0_.nombreApellidoPaterno as nombreAp4_0_0_, usuario0_.nombreApellidoMaterno as nombreAp5_0_0_, usuario0_.nombrePosfijo as nombrePo6_0_0_, usuario0_.nombreIniciales as nombreIn7_0_0_, usuario0_.nombreUsuario as nombreUs8_0_0_, usuario0_.claveAcceso as claveAcc9_0_0_ from Usuarios usuario0_ where usuario0_.idUsuario=?
+Hibernate: select roles0_.idUsuario as idUsuario0_1_, roles0_.idRol as idRol1_, rol1_.idRol as idRol2_0_, rol1_.nombre as nombre2_0_, rol1_.descripcion as descripc3_2_0_ from UsuarioRol roles0_ inner join Roles rol1_ on roles0_.idRol=rol1_.idRol where roles0_.idUsuario=?
+Hibernate: select usuarios0_.idRol as idRol2_1_, usuarios0_.idUsuario as idUsuario1_, usuario1_.idUsuario as idUsuario0_0_, usuario1_.nombrePrefijo as nombrePr2_0_0_, usuario1_.nombreNombre as nombreNo3_0_0_, usuario1_.nombreApellidoPaterno as nombreAp4_0_0_, usuario1_.nombreApellidoMaterno as nombreAp5_0_0_, usuario1_.nombrePosfijo as nombrePo6_0_0_, usuario1_.nombreIniciales as nombreIn7_0_0_, usuario1_.nombreUsuario as nombreUs8_0_0_, usuario1_.claveAcceso as claveAcc9_0_0_ from UsuarioRol usuarios0_ inner join Usuarios usuario1_ on usuarios0_.idUsuario=usuario1_.idUsuario where usuarios0_.idRol=?
+Hibernate: select usuarios0_.idRol as idRol2_1_, usuarios0_.idUsuario as idUsuario1_, usuario1_.idUsuario as idUsuario0_0_, usuario1_.nombrePrefijo as nombrePr2_0_0_, usuario1_.nombreNombre as nombreNo3_0_0_, usuario1_.nombreApellidoPaterno as nombreAp4_0_0_, usuario1_.nombreApellidoMaterno as nombreAp5_0_0_, usuario1_.nombrePosfijo as nombrePo6_0_0_, usuario1_.nombreIniciales as nombreIn7_0_0_, usuario1_.nombreUsuario as nombreUs8_0_0_, usuario1_.claveAcceso as claveAcc9_0_0_ from UsuarioRol usuarios0_ inner join Usuarios usuario1_ on usuarios0_.idUsuario=usuario1_.idUsuario where usuarios0_.idRol=?
+[SCEC] 2017-04-07 11:10:47,834 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
+[SCEC] 2017-04-07 11:10:47,834 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(212) : -Cerrando la sesión local al thread.
+[SCEC] 2017-04-07 11:10:47,840 DEBUG edu.uag.iidis.scec.persistencia.UsuarioDAO.buscarPorEjemplo(122) : >buscarPorEjemplo()
+[SCEC] 2017-04-07 11:10:47,841 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:47,841 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(167) : -Abriendo una nueva sesión para el thread.
+Hibernate: select this_.idUsuario as idUsuario0_0_, this_.nombrePrefijo as nombrePr2_0_0_, this_.nombreNombre as nombreNo3_0_0_, this_.nombreApellidoPaterno as nombreAp4_0_0_, this_.nombreApellidoMaterno as nombreAp5_0_0_, this_.nombrePosfijo as nombrePo6_0_0_, this_.nombreIniciales as nombreIn7_0_0_, this_.nombreUsuario as nombreUs8_0_0_, this_.claveAcceso as claveAcc9_0_0_ from Usuarios this_ where (this_.nombreUsuario=?)
+Hibernate: select roles0_.idUsuario as idUsuario0_1_, roles0_.idRol as idRol1_, rol1_.idRol as idRol2_0_, rol1_.nombre as nombre2_0_, rol1_.descripcion as descripc3_2_0_ from UsuarioRol roles0_ inner join Roles rol1_ on roles0_.idRol=rol1_.idRol where roles0_.idUsuario=?
+Hibernate: select usuarios0_.idRol as idRol2_1_, usuarios0_.idUsuario as idUsuario1_, usuario1_.idUsuario as idUsuario0_0_, usuario1_.nombrePrefijo as nombrePr2_0_0_, usuario1_.nombreNombre as nombreNo3_0_0_, usuario1_.nombreApellidoPaterno as nombreAp4_0_0_, usuario1_.nombreApellidoMaterno as nombreAp5_0_0_, usuario1_.nombrePosfijo as nombrePo6_0_0_, usuario1_.nombreIniciales as nombreIn7_0_0_, usuario1_.nombreUsuario as nombreUs8_0_0_, usuario1_.claveAcceso as claveAcc9_0_0_ from UsuarioRol usuarios0_ inner join Usuarios usuario1_ on usuarios0_.idUsuario=usuario1_.idUsuario where usuarios0_.idRol=?
+Hibernate: select usuarios0_.idRol as idRol2_1_, usuarios0_.idUsuario as idUsuario1_, usuario1_.idUsuario as idUsuario0_0_, usuario1_.nombrePrefijo as nombrePr2_0_0_, usuario1_.nombreNombre as nombreNo3_0_0_, usuario1_.nombreApellidoPaterno as nombreAp4_0_0_, usuario1_.nombreApellidoMaterno as nombreAp5_0_0_, usuario1_.nombrePosfijo as nombrePo6_0_0_, usuario1_.nombreIniciales as nombreIn7_0_0_, usuario1_.nombreUsuario as nombreUs8_0_0_, usuario1_.claveAcceso as claveAcc9_0_0_ from UsuarioRol usuarios0_ inner join Usuarios usuario1_ on usuarios0_.idUsuario=usuario1_.idUsuario where usuarios0_.idRol=?
+[SCEC] 2017-04-07 11:10:47,876 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
+[SCEC] 2017-04-07 11:10:47,876 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(212) : -Cerrando la sesión local al thread.
+[SCEC] 2017-04-07 11:10:47,877 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:47,877 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:47,877 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:47,878 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(167) : -Abriendo una nueva sesión para el thread.
+[SCEC] 2017-04-07 11:10:47,878 DEBUG edu.uag.iidis.scec.persistencia.UsuarioDAO.hazPersistente(186) : >hazPersistente(usuario)
+[SCEC] 2017-04-07 11:10:47,879 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+Hibernate: select max(idUsuario) from Usuarios
+[SCEC] 2017-04-07 11:10:47,902 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:47,902 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+Hibernate: insert into Usuarios (nombrePrefijo, nombreNombre, nombreApellidoPaterno, nombreApellidoMaterno, nombrePosfijo, nombreIniciales, nombreUsuario, claveAcceso, idUsuario) values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[SCEC] 2017-04-07 11:10:48,004 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:48,004 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:48,005 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:48,005 DEBUG edu.uag.iidis.scec.persistencia.UsuarioDAO.buscarPorNombreUsuario(63) : >buscarPorNombreUsuario(flyzx)
+[SCEC] 2017-04-07 11:10:48,006 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+Hibernate: select usuario0_.idUsuario as idUsuario0_, usuario0_.nombrePrefijo as nombrePr2_0_, usuario0_.nombreNombre as nombreNo3_0_, usuario0_.nombreApellidoPaterno as nombreAp4_0_, usuario0_.nombreApellidoMaterno as nombreAp5_0_, usuario0_.nombrePosfijo as nombrePo6_0_, usuario0_.nombreIniciales as nombreIn7_0_, usuario0_.nombreUsuario as nombreUs8_0_, usuario0_.claveAcceso as claveAcc9_0_ from Usuarios usuario0_ where usuario0_.nombreUsuario=?
+[SCEC] 2017-04-07 11:10:48,224 DEBUG edu.uag.iidis.scec.persistencia.UsuarioDAO.hazTransitorio(207) : >hazTransitorio(usuario)
+[SCEC] 2017-04-07 11:10:48,224 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:48,228 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:48,228 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+Hibernate: delete from Usuarios where idUsuario=?
+[SCEC] 2017-04-07 11:10:48,269 DEBUG edu.uag.iidis.scec.persistencia.UsuarioDAO.buscarPorNombreUsuario(63) : >buscarPorNombreUsuario(flyzx)
+[SCEC] 2017-04-07 11:10:48,269 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+Hibernate: select usuario0_.idUsuario as idUsuario0_, usuario0_.nombrePrefijo as nombrePr2_0_, usuario0_.nombreNombre as nombreNo3_0_, usuario0_.nombreApellidoPaterno as nombreAp4_0_, usuario0_.nombreApellidoMaterno as nombreAp5_0_, usuario0_.nombrePosfijo as nombrePo6_0_, usuario0_.nombreIniciales as nombreIn7_0_, usuario0_.nombreUsuario as nombreUs8_0_, usuario0_.claveAcceso as claveAcc9_0_ from Usuarios usuario0_ where usuario0_.nombreUsuario=?
+[SCEC] 2017-04-07 11:10:48,271 DEBUG edu.uag.iidis.scec.persistencia.UsuarioDAO.buscarPorNombreUsuario(79) : >buscarPorNombreUsuario(flyzx)
+[SCEC] 2017-04-07 11:10:48,271 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
+[SCEC] 2017-04-07 11:10:48,271 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(212) : -Cerrando la sesión local al thread.
+[SCEC] 2017-04-07 11:10:48,272 DEBUG edu.uag.iidis.scec.persistencia.UsuarioDAO.buscarTodos(100) : >buscarTodos()
+[SCEC] 2017-04-07 11:10:48,272 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:48,272 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(167) : -Abriendo una nueva sesión para el thread.
+Hibernate: select this_.idUsuario as idUsuario0_0_, this_.nombrePrefijo as nombrePr2_0_0_, this_.nombreNombre as nombreNo3_0_0_, this_.nombreApellidoPaterno as nombreAp4_0_0_, this_.nombreApellidoMaterno as nombreAp5_0_0_, this_.nombrePosfijo as nombrePo6_0_0_, this_.nombreIniciales as nombreIn7_0_0_, this_.nombreUsuario as nombreUs8_0_0_, this_.claveAcceso as claveAcc9_0_0_ from Usuarios this_
+Hibernate: select roles0_.idUsuario as idUsuario0_1_, roles0_.idRol as idRol1_, rol1_.idRol as idRol2_0_, rol1_.nombre as nombre2_0_, rol1_.descripcion as descripc3_2_0_ from UsuarioRol roles0_ inner join Roles rol1_ on roles0_.idRol=rol1_.idRol where roles0_.idUsuario=?
+Hibernate: select roles0_.idUsuario as idUsuario0_1_, roles0_.idRol as idRol1_, rol1_.idRol as idRol2_0_, rol1_.nombre as nombre2_0_, rol1_.descripcion as descripc3_2_0_ from UsuarioRol roles0_ inner join Roles rol1_ on roles0_.idRol=rol1_.idRol where roles0_.idUsuario=?
+Hibernate: select usuarios0_.idRol as idRol2_1_, usuarios0_.idUsuario as idUsuario1_, usuario1_.idUsuario as idUsuario0_0_, usuario1_.nombrePrefijo as nombrePr2_0_0_, usuario1_.nombreNombre as nombreNo3_0_0_, usuario1_.nombreApellidoPaterno as nombreAp4_0_0_, usuario1_.nombreApellidoMaterno as nombreAp5_0_0_, usuario1_.nombrePosfijo as nombrePo6_0_0_, usuario1_.nombreIniciales as nombreIn7_0_0_, usuario1_.nombreUsuario as nombreUs8_0_0_, usuario1_.claveAcceso as claveAcc9_0_0_ from UsuarioRol usuarios0_ inner join Usuarios usuario1_ on usuarios0_.idUsuario=usuario1_.idUsuario where usuarios0_.idRol=?
+Hibernate: select usuarios0_.idRol as idRol2_1_, usuarios0_.idUsuario as idUsuario1_, usuario1_.idUsuario as idUsuario0_0_, usuario1_.nombrePrefijo as nombrePr2_0_0_, usuario1_.nombreNombre as nombreNo3_0_0_, usuario1_.nombreApellidoPaterno as nombreAp4_0_0_, usuario1_.nombreApellidoMaterno as nombreAp5_0_0_, usuario1_.nombrePosfijo as nombrePo6_0_0_, usuario1_.nombreIniciales as nombreIn7_0_0_, usuario1_.nombreUsuario as nombreUs8_0_0_, usuario1_.claveAcceso as claveAcc9_0_0_ from UsuarioRol usuarios0_ inner join Usuarios usuario1_ on usuarios0_.idUsuario=usuario1_.idUsuario where usuarios0_.idRol=?
+[SCEC] 2017-04-07 11:10:48,284 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
+[SCEC] 2017-04-07 11:10:48,284 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(212) : -Cerrando la sesión local al thread.
+[SCEC] 2017-04-07 11:10:48,285 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:48,285 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:48,286 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:48,286 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(167) : -Abriendo una nueva sesión para el thread.
+[SCEC] 2017-04-07 11:10:48,286 DEBUG edu.uag.iidis.scec.persistencia.UsuarioDAO.hazPersistente(186) : >hazPersistente(usuario)
+[SCEC] 2017-04-07 11:10:48,287 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:48,287 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:48,288 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+Hibernate: insert into Usuarios (nombrePrefijo, nombreNombre, nombreApellidoPaterno, nombreApellidoMaterno, nombrePosfijo, nombreIniciales, nombreUsuario, claveAcceso, idUsuario) values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[SCEC] 2017-04-07 11:10:48,324 DEBUG edu.uag.iidis.scec.persistencia.UsuarioDAO.buscarPorNombreUsuario(63) : >buscarPorNombreUsuario(flyzx)
+[SCEC] 2017-04-07 11:10:48,325 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+Hibernate: select usuario0_.idUsuario as idUsuario0_, usuario0_.nombrePrefijo as nombrePr2_0_, usuario0_.nombreNombre as nombreNo3_0_, usuario0_.nombreApellidoPaterno as nombreAp4_0_, usuario0_.nombreApellidoMaterno as nombreAp5_0_, usuario0_.nombrePosfijo as nombrePo6_0_, usuario0_.nombreIniciales as nombreIn7_0_, usuario0_.nombreUsuario as nombreUs8_0_, usuario0_.claveAcceso as claveAcc9_0_ from Usuarios usuario0_ where usuario0_.nombreUsuario=?
+[SCEC] 2017-04-07 11:10:48,326 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:48,326 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:48,326 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:48,327 DEBUG edu.uag.iidis.scec.persistencia.UsuarioDAO.buscarPorNombreUsuario(63) : >buscarPorNombreUsuario(flyzx)
+[SCEC] 2017-04-07 11:10:48,327 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+Hibernate: select usuario0_.idUsuario as idUsuario0_, usuario0_.nombrePrefijo as nombrePr2_0_, usuario0_.nombreNombre as nombreNo3_0_, usuario0_.nombreApellidoPaterno as nombreAp4_0_, usuario0_.nombreApellidoMaterno as nombreAp5_0_, usuario0_.nombrePosfijo as nombrePo6_0_, usuario0_.nombreIniciales as nombreIn7_0_, usuario0_.nombreUsuario as nombreUs8_0_, usuario0_.claveAcceso as claveAcc9_0_ from Usuarios usuario0_ where usuario0_.nombreUsuario=?
+[SCEC] 2017-04-07 11:10:48,329 DEBUG edu.uag.iidis.scec.persistencia.UsuarioDAO.hazTransitorio(207) : >hazTransitorio(usuario)
+[SCEC] 2017-04-07 11:10:48,329 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:48,329 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:48,329 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+Hibernate: delete from Usuarios where idUsuario=?
+[SCEC] 2017-04-07 11:10:48,355 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
+[SCEC] 2017-04-07 11:10:48,355 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(212) : -Cerrando la sesión local al thread.
+[SCEC] 2017-04-07 11:10:48,356 DEBUG edu.uag.iidis.scec.persistencia.UsuarioDAO.buscarPorId(33) : >buscarPorID(1, false)
+[SCEC] 2017-04-07 11:10:48,356 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:48,356 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(167) : -Abriendo una nueva sesión para el thread.
+Hibernate: select usuario0_.idUsuario as idUsuario0_0_, usuario0_.nombrePrefijo as nombrePr2_0_0_, usuario0_.nombreNombre as nombreNo3_0_0_, usuario0_.nombreApellidoPaterno as nombreAp4_0_0_, usuario0_.nombreApellidoMaterno as nombreAp5_0_0_, usuario0_.nombrePosfijo as nombrePo6_0_0_, usuario0_.nombreIniciales as nombreIn7_0_0_, usuario0_.nombreUsuario as nombreUs8_0_0_, usuario0_.claveAcceso as claveAcc9_0_0_ from Usuarios usuario0_ where usuario0_.idUsuario=?
+Hibernate: select roles0_.idUsuario as idUsuario0_1_, roles0_.idRol as idRol1_, rol1_.idRol as idRol2_0_, rol1_.nombre as nombre2_0_, rol1_.descripcion as descripc3_2_0_ from UsuarioRol roles0_ inner join Roles rol1_ on roles0_.idRol=rol1_.idRol where roles0_.idUsuario=?
+Hibernate: select usuarios0_.idRol as idRol2_1_, usuarios0_.idUsuario as idUsuario1_, usuario1_.idUsuario as idUsuario0_0_, usuario1_.nombrePrefijo as nombrePr2_0_0_, usuario1_.nombreNombre as nombreNo3_0_0_, usuario1_.nombreApellidoPaterno as nombreAp4_0_0_, usuario1_.nombreApellidoMaterno as nombreAp5_0_0_, usuario1_.nombrePosfijo as nombrePo6_0_0_, usuario1_.nombreIniciales as nombreIn7_0_0_, usuario1_.nombreUsuario as nombreUs8_0_0_, usuario1_.claveAcceso as claveAcc9_0_0_ from UsuarioRol usuarios0_ inner join Usuarios usuario1_ on usuarios0_.idUsuario=usuario1_.idUsuario where usuarios0_.idRol=?
+Hibernate: select usuarios0_.idRol as idRol2_1_, usuarios0_.idUsuario as idUsuario1_, usuario1_.idUsuario as idUsuario0_0_, usuario1_.nombrePrefijo as nombrePr2_0_0_, usuario1_.nombreNombre as nombreNo3_0_0_, usuario1_.nombreApellidoPaterno as nombreAp4_0_0_, usuario1_.nombreApellidoMaterno as nombreAp5_0_0_, usuario1_.nombrePosfijo as nombrePo6_0_0_, usuario1_.nombreIniciales as nombreIn7_0_0_, usuario1_.nombreUsuario as nombreUs8_0_0_, usuario1_.claveAcceso as claveAcc9_0_0_ from UsuarioRol usuarios0_ inner join Usuarios usuario1_ on usuarios0_.idUsuario=usuario1_.idUsuario where usuarios0_.idRol=?
+[SCEC] 2017-04-07 11:10:48,364 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
+[SCEC] 2017-04-07 11:10:48,365 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(212) : -Cerrando la sesión local al thread.
+[SCEC] 2017-04-07 11:10:48,367 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:48,368 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:48,368 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:48,368 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(167) : -Abriendo una nueva sesión para el thread.
+[SCEC] 2017-04-07 11:10:48,368 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.hazPersistente(182) : >hazPersistente(hotel)
+[SCEC] 2017-04-07 11:10:48,368 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+Hibernate: select max(id) from Hoteles
+[SCEC] 2017-04-07 11:10:48,369 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:48,369 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+Hibernate: insert into Hoteles (Nombre, Descripcion, Precio, Horario, Estado, Imagen, Pais, Direccion, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[SCEC] 2017-04-07 11:10:48,402 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:48,403 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:48,403 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:48,403 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.existeHotel(217) : >existeRol(nombreRol)
+[SCEC] 2017-04-07 11:10:48,403 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.existeHotel(238) : select nombre from Hotel where nombre = :nombreExiste Hotel
+[SCEC] 2017-04-07 11:10:48,403 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:48,409 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.existeHotel(244) : <<<<<<<<< create query ok 
+[SCEC] 2017-04-07 11:10:48,410 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.existeHotel(249) : <<<<<<<<< set Parameter ok antes del query list >>>>>
+Hibernate: select hotel0_.Nombre as col_0_0_ from Hoteles hotel0_ where hotel0_.Nombre=?
+[SCEC] 2017-04-07 11:10:48,411 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.existeHotel(254) : <<<<<<<<< Result size 1
+[SCEC] 2017-04-07 11:10:48,411 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:48,411 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+[SCEC] 2017-04-07 11:10:48,412 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:48,412 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:48,413 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:48,413 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.buscarPorNombre(61) : >buscarPorNombre(Existe Hotel)
+[SCEC] 2017-04-07 11:10:48,413 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+Hibernate: select hotel0_.id as id7_, hotel0_.Nombre as Nombre7_, hotel0_.Descripcion as Descripc3_7_, hotel0_.Precio as Precio7_, hotel0_.Horario as Horario7_, hotel0_.Estado as Estado7_, hotel0_.Imagen as Imagen7_, hotel0_.Pais as Pais7_, hotel0_.Direccion as Direccion7_ from Hoteles hotel0_ where hotel0_.Nombre=?
+[SCEC] 2017-04-07 11:10:48,419 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.hazTransitorio(200) : >hazTransitorio(hotel)
+[SCEC] 2017-04-07 11:10:48,419 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:48,419 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:48,419 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+Hibernate: delete from Hoteles where id=?
+[SCEC] 2017-04-07 11:10:48,480 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
+[SCEC] 2017-04-07 11:10:48,480 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(212) : -Cerrando la sesión local al thread.
+[SCEC] 2017-04-07 11:10:48,481 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:48,481 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:48,481 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:48,481 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(167) : -Abriendo una nueva sesión para el thread.
+[SCEC] 2017-04-07 11:10:48,482 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.hazPersistente(182) : >hazPersistente(hotel)
+[SCEC] 2017-04-07 11:10:48,482 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:48,482 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:48,483 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+Hibernate: insert into Hoteles (Nombre, Descripcion, Precio, Horario, Estado, Imagen, Pais, Direccion, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[SCEC] 2017-04-07 11:10:48,579 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:48,580 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:48,580 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:48,580 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.buscarTodos(134) : >buscarTodos()
+[SCEC] 2017-04-07 11:10:48,580 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+Hibernate: select this_.id as id7_0_, this_.Nombre as Nombre7_0_, this_.Descripcion as Descripc3_7_0_, this_.Precio as Precio7_0_, this_.Horario as Horario7_0_, this_.Estado as Estado7_0_, this_.Imagen as Imagen7_0_, this_.Pais as Pais7_0_, this_.Direccion as Direccion7_0_ from Hoteles this_
+[SCEC] 2017-04-07 11:10:48,581 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.buscarTodos(142) : >buscarTodos() ---- list   1
+[SCEC] 2017-04-07 11:10:48,591 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.buscarTodos(143) : >buscarTodos() ---- contenido   [edu.uag.iidis.scec.modelo.Hotel@34a75079[
+  id=2
+  nombre=BuscarTodo
+  descripcion=012
+  precio=012
+  horario=012
+  estado=012
+  imagen=012
+  pais=012
+  direccion=012
+]]
+[SCEC] 2017-04-07 11:10:48,591 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:48,591 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+[SCEC] 2017-04-07 11:10:48,592 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:48,592 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:48,592 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:48,593 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.buscarPorNombre(61) : >buscarPorNombre(BuscarTodo)
+[SCEC] 2017-04-07 11:10:48,593 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+Hibernate: select hotel0_.id as id7_, hotel0_.Nombre as Nombre7_, hotel0_.Descripcion as Descripc3_7_, hotel0_.Precio as Precio7_, hotel0_.Horario as Horario7_, hotel0_.Estado as Estado7_, hotel0_.Imagen as Imagen7_, hotel0_.Pais as Pais7_, hotel0_.Direccion as Direccion7_ from Hoteles hotel0_ where hotel0_.Nombre=?
+[SCEC] 2017-04-07 11:10:48,595 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.hazTransitorio(200) : >hazTransitorio(hotel)
+[SCEC] 2017-04-07 11:10:48,595 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:48,595 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:48,596 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+Hibernate: delete from Hoteles where id=?
+[SCEC] 2017-04-07 11:10:48,632 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
+[SCEC] 2017-04-07 11:10:48,632 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(212) : -Cerrando la sesión local al thread.
+[SCEC] 2017-04-07 11:10:48,633 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:48,633 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:48,633 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:48,633 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(167) : -Abriendo una nueva sesión para el thread.
+[SCEC] 2017-04-07 11:10:48,633 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.hazPersistente(182) : >hazPersistente(hotel)
+[SCEC] 2017-04-07 11:10:48,634 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:48,634 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:48,634 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+Hibernate: insert into Hoteles (Nombre, Descripcion, Precio, Horario, Estado, Imagen, Pais, Direccion, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[SCEC] 2017-04-07 11:10:48,677 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:48,678 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:48,678 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:48,678 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.buscarPorNombre(61) : >buscarPorNombre(CrearHotel)
+[SCEC] 2017-04-07 11:10:48,678 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+Hibernate: select hotel0_.id as id7_, hotel0_.Nombre as Nombre7_, hotel0_.Descripcion as Descripc3_7_, hotel0_.Precio as Precio7_, hotel0_.Horario as Horario7_, hotel0_.Estado as Estado7_, hotel0_.Imagen as Imagen7_, hotel0_.Pais as Pais7_, hotel0_.Direccion as Direccion7_ from Hoteles hotel0_ where hotel0_.Nombre=?
+[SCEC] 2017-04-07 11:10:48,679 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:48,680 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+[SCEC] 2017-04-07 11:10:48,680 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:48,680 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:48,680 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:48,681 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.buscarPorNombre(61) : >buscarPorNombre(CrearHotel)
+[SCEC] 2017-04-07 11:10:48,681 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+Hibernate: select hotel0_.id as id7_, hotel0_.Nombre as Nombre7_, hotel0_.Descripcion as Descripc3_7_, hotel0_.Precio as Precio7_, hotel0_.Horario as Horario7_, hotel0_.Estado as Estado7_, hotel0_.Imagen as Imagen7_, hotel0_.Pais as Pais7_, hotel0_.Direccion as Direccion7_ from Hoteles hotel0_ where hotel0_.Nombre=?
+[SCEC] 2017-04-07 11:10:48,682 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.hazTransitorio(200) : >hazTransitorio(hotel)
+[SCEC] 2017-04-07 11:10:48,682 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:48,682 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:48,683 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+Hibernate: delete from Hoteles where id=?
+[SCEC] 2017-04-07 11:10:48,712 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
+[SCEC] 2017-04-07 11:10:48,713 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(212) : -Cerrando la sesión local al thread.
+[SCEC] 2017-04-07 11:10:48,713 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:48,713 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:48,713 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:48,713 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(167) : -Abriendo una nueva sesión para el thread.
+[SCEC] 2017-04-07 11:10:48,714 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.hazPersistente(182) : >hazPersistente(hotel)
+[SCEC] 2017-04-07 11:10:48,714 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:48,716 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:48,716 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+Hibernate: insert into Hoteles (Nombre, Descripcion, Precio, Horario, Estado, Imagen, Pais, Direccion, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[SCEC] 2017-04-07 11:10:48,768 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:48,768 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:48,768 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:48,769 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.existeHotel(217) : >existeRol(nombreRol)
+[SCEC] 2017-04-07 11:10:48,769 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.existeHotel(238) : select nombre from Hotel where nombre = :nombreExisteHotel2
+[SCEC] 2017-04-07 11:10:48,769 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:48,770 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.existeHotel(244) : <<<<<<<<< create query ok 
+[SCEC] 2017-04-07 11:10:48,770 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.existeHotel(249) : <<<<<<<<< set Parameter ok antes del query list >>>>>
+Hibernate: select hotel0_.Nombre as col_0_0_ from Hoteles hotel0_ where hotel0_.Nombre=?
+[SCEC] 2017-04-07 11:10:48,772 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.existeHotel(254) : <<<<<<<<< Result size 0
+[SCEC] 2017-04-07 11:10:48,772 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:48,773 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+[SCEC] 2017-04-07 11:10:48,774 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:48,774 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:48,774 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:48,775 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.buscarPorNombre(61) : >buscarPorNombre(ExisteHotel)
+[SCEC] 2017-04-07 11:10:48,775 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+Hibernate: select hotel0_.id as id7_, hotel0_.Nombre as Nombre7_, hotel0_.Descripcion as Descripc3_7_, hotel0_.Precio as Precio7_, hotel0_.Horario as Horario7_, hotel0_.Estado as Estado7_, hotel0_.Imagen as Imagen7_, hotel0_.Pais as Pais7_, hotel0_.Direccion as Direccion7_ from Hoteles hotel0_ where hotel0_.Nombre=?
+[SCEC] 2017-04-07 11:10:48,777 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.hazTransitorio(200) : >hazTransitorio(hotel)
+[SCEC] 2017-04-07 11:10:48,778 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:48,778 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:48,778 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+Hibernate: delete from Hoteles where id=?
+[SCEC] 2017-04-07 11:10:48,809 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
+[SCEC] 2017-04-07 11:10:48,810 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(212) : -Cerrando la sesión local al thread.
+[SCEC] 2017-04-07 11:10:48,810 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:48,810 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:48,810 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:48,811 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(167) : -Abriendo una nueva sesión para el thread.
+[SCEC] 2017-04-07 11:10:48,811 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.hazPersistente(182) : >hazPersistente(hotel)
+[SCEC] 2017-04-07 11:10:48,811 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:48,811 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:48,812 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+Hibernate: insert into Hoteles (Nombre, Descripcion, Precio, Horario, Estado, Imagen, Pais, Direccion, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[SCEC] 2017-04-07 11:10:48,845 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:48,845 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:48,846 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:48,846 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.ordenarHotelesPor(96) : >buscarTodos()
+[SCEC] 2017-04-07 11:10:48,846 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.ordenarHotelesPor(103) : from Hotel ORDER BY nombre
+[SCEC] 2017-04-07 11:10:48,846 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+Hibernate: select hotel0_.id as id7_, hotel0_.Nombre as Nombre7_, hotel0_.Descripcion as Descripc3_7_, hotel0_.Precio as Precio7_, hotel0_.Horario as Horario7_, hotel0_.Estado as Estado7_, hotel0_.Imagen as Imagen7_, hotel0_.Pais as Pais7_, hotel0_.Direccion as Direccion7_ from Hoteles hotel0_ order by hotel0_.Nombre
+[SCEC] 2017-04-07 11:10:48,855 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.ordenarHotelesPor(109) : <<<<<<<<< create query ok 
+[SCEC] 2017-04-07 11:10:48,855 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.ordenarHotelesPor(115) : >buscarTodos() ---- list   1
+[SCEC] 2017-04-07 11:10:48,855 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.ordenarHotelesPor(116) : >buscarTodos() ---- contenido   [edu.uag.iidis.scec.modelo.Hotel@25ddbbbb[
+  id=5
+  nombre=OrdenarHotel
+  descripcion=012
+  precio=012
+  horario=012
+  estado=012
+  imagen=012
+  pais=012
+  direccion=012
+]]
+[SCEC] 2017-04-07 11:10:48,855 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:48,856 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+[SCEC] 2017-04-07 11:10:48,856 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:48,856 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:48,856 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:48,857 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.buscarPorNombre(61) : >buscarPorNombre(OrdenarHotel)
+[SCEC] 2017-04-07 11:10:48,857 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+Hibernate: select hotel0_.id as id7_, hotel0_.Nombre as Nombre7_, hotel0_.Descripcion as Descripc3_7_, hotel0_.Precio as Precio7_, hotel0_.Horario as Horario7_, hotel0_.Estado as Estado7_, hotel0_.Imagen as Imagen7_, hotel0_.Pais as Pais7_, hotel0_.Direccion as Direccion7_ from Hoteles hotel0_ where hotel0_.Nombre=?
+[SCEC] 2017-04-07 11:10:48,858 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.hazTransitorio(200) : >hazTransitorio(hotel)
+[SCEC] 2017-04-07 11:10:48,858 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:48,858 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:48,859 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+Hibernate: delete from Hoteles where id=?
+[SCEC] 2017-04-07 11:10:48,887 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
+[SCEC] 2017-04-07 11:10:48,887 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(212) : -Cerrando la sesión local al thread.
+[SCEC] 2017-04-07 11:10:48,888 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:48,888 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:48,888 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:48,888 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(167) : -Abriendo una nueva sesión para el thread.
+[SCEC] 2017-04-07 11:10:48,888 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.hazPersistente(182) : >hazPersistente(hotel)
+[SCEC] 2017-04-07 11:10:48,888 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:48,889 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:48,889 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+Hibernate: insert into Hoteles (Nombre, Descripcion, Precio, Horario, Estado, Imagen, Pais, Direccion, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[SCEC] 2017-04-07 11:10:48,922 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:48,923 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:48,923 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:48,923 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.buscarPorNombre(61) : >buscarPorNombre(EliminarHotel)
+[SCEC] 2017-04-07 11:10:48,923 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+Hibernate: select hotel0_.id as id7_, hotel0_.Nombre as Nombre7_, hotel0_.Descripcion as Descripc3_7_, hotel0_.Precio as Precio7_, hotel0_.Horario as Horario7_, hotel0_.Estado as Estado7_, hotel0_.Imagen as Imagen7_, hotel0_.Pais as Pais7_, hotel0_.Direccion as Direccion7_ from Hoteles hotel0_ where hotel0_.Nombre=?
+[SCEC] 2017-04-07 11:10:48,925 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.hazTransitorio(200) : >hazTransitorio(hotel)
+[SCEC] 2017-04-07 11:10:48,925 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:48,925 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:48,925 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+Hibernate: delete from Hoteles where id=?
+[SCEC] 2017-04-07 11:10:48,989 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.buscarPorNombre(61) : >buscarPorNombre(EliminarHotel)
+[SCEC] 2017-04-07 11:10:48,990 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+Hibernate: select hotel0_.id as id7_, hotel0_.Nombre as Nombre7_, hotel0_.Descripcion as Descripc3_7_, hotel0_.Precio as Precio7_, hotel0_.Horario as Horario7_, hotel0_.Estado as Estado7_, hotel0_.Imagen as Imagen7_, hotel0_.Pais as Pais7_, hotel0_.Direccion as Direccion7_ from Hoteles hotel0_ where hotel0_.Nombre=?
+[SCEC] 2017-04-07 11:10:48,991 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.buscarPorNombre(77) : >buscarPorNombre(EliminarHotel)
+[SCEC] 2017-04-07 11:10:48,991 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
+[SCEC] 2017-04-07 11:10:48,991 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(212) : -Cerrando la sesión local al thread.
+[SCEC] 2017-04-07 11:10:48,992 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:48,992 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:48,992 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:48,992 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(167) : -Abriendo una nueva sesión para el thread.
+[SCEC] 2017-04-07 11:10:48,992 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.hazPersistente(182) : >hazPersistente(hotel)
+[SCEC] 2017-04-07 11:10:48,993 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:48,993 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:48,993 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+Hibernate: insert into Hoteles (Nombre, Descripcion, Precio, Horario, Estado, Imagen, Pais, Direccion, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[SCEC] 2017-04-07 11:10:49,067 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:49,067 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:49,067 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:49,068 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.buscarPorNombre(61) : >buscarPorNombre(ActualizaHotel)
+[SCEC] 2017-04-07 11:10:49,068 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+Hibernate: select hotel0_.id as id7_, hotel0_.Nombre as Nombre7_, hotel0_.Descripcion as Descripc3_7_, hotel0_.Precio as Precio7_, hotel0_.Horario as Horario7_, hotel0_.Estado as Estado7_, hotel0_.Imagen as Imagen7_, hotel0_.Pais as Pais7_, hotel0_.Direccion as Direccion7_ from Hoteles hotel0_ where hotel0_.Nombre=?
+[SCEC] 2017-04-07 11:10:49,070 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.modificar(276) : >modificar(estado)
+edu.uag.iidis.scec.modelo.Hotel@226642a5[
+  id=7
+  nombre=ActualizaHotel
+  descripcion=012
+  precio=012
+  horario=012
+  estado=012
+  imagen=012
+  pais=012
+  direccion=012
+]
+[SCEC] 2017-04-07 11:10:49,071 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:49,071 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:49,071 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+[SCEC] 2017-04-07 11:10:49,072 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:49,073 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:49,073 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:49,073 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.buscarPorNombre(61) : >buscarPorNombre(ActualizaHotel)
+[SCEC] 2017-04-07 11:10:49,074 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+Hibernate: select hotel0_.id as id7_, hotel0_.Nombre as Nombre7_, hotel0_.Descripcion as Descripc3_7_, hotel0_.Precio as Precio7_, hotel0_.Horario as Horario7_, hotel0_.Estado as Estado7_, hotel0_.Imagen as Imagen7_, hotel0_.Pais as Pais7_, hotel0_.Direccion as Direccion7_ from Hoteles hotel0_ where hotel0_.Nombre=?
+[SCEC] 2017-04-07 11:10:49,076 DEBUG edu.uag.iidis.scec.persistencia.HotelDAO.hazTransitorio(200) : >hazTransitorio(hotel)
+[SCEC] 2017-04-07 11:10:49,076 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:49,077 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:49,077 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+Hibernate: delete from Hoteles where id=?
+[SCEC] 2017-04-07 11:10:49,108 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
+[SCEC] 2017-04-07 11:10:49,109 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(212) : -Cerrando la sesión local al thread.
+[SCEC] 2017-04-07 11:10:49,112 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:49,113 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:49,113 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:49,113 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(167) : -Abriendo una nueva sesión para el thread.
+[SCEC] 2017-04-07 11:10:49,114 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.hazPersistente(182) : >hazPersistente(critica)
+[SCEC] 2017-04-07 11:10:49,114 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+Hibernate: select max(id) from Criticaes
+[SCEC] 2017-04-07 11:10:49,116 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:49,116 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+Hibernate: insert into Criticaes (Nombre, Descripcion, Hotel, Nivel, id) values (?, ?, ?, ?, ?)
+[SCEC] 2017-04-07 11:10:49,155 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:49,155 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:49,155 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:49,156 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.buscarTodos(134) : >buscarTodos()
+[SCEC] 2017-04-07 11:10:49,156 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+Hibernate: select this_.id as id8_0_, this_.Nombre as Nombre8_0_, this_.Descripcion as Descripc3_8_0_, this_.Hotel as Hotel8_0_, this_.Nivel as Nivel8_0_ from Criticaes this_
+[SCEC] 2017-04-07 11:10:49,158 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.buscarTodos(142) : >buscarTodos() ---- list   1
+[SCEC] 2017-04-07 11:10:49,159 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.buscarTodos(143) : >buscarTodos() ---- contenido   [edu.uag.iidis.scec.modelo.Critica@119f1f2a[
+  id=1
+  nombre=BuscarTodo
+  descripcion=012
+  hotel=012
+  nivel=012
+]]
+[SCEC] 2017-04-07 11:10:49,159 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:49,159 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+[SCEC] 2017-04-07 11:10:49,160 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:49,160 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:49,161 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:49,161 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.buscarPorNombre(30) : >buscarPorNombre(BuscarTodo)
+[SCEC] 2017-04-07 11:10:49,161 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+Hibernate: select critica0_.id as id8_, critica0_.Nombre as Nombre8_, critica0_.Descripcion as Descripc3_8_, critica0_.Hotel as Hotel8_, critica0_.Nivel as Nivel8_ from Criticaes critica0_ where critica0_.Nombre=?
+[SCEC] 2017-04-07 11:10:49,169 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.hazTransitorio(200) : >hazTransitorio(critica)
+[SCEC] 2017-04-07 11:10:49,169 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:49,169 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:49,170 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+Hibernate: delete from Criticaes where id=?
+[SCEC] 2017-04-07 11:10:49,197 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
+[SCEC] 2017-04-07 11:10:49,198 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(212) : -Cerrando la sesión local al thread.
+[SCEC] 2017-04-07 11:10:49,198 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:49,199 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:49,199 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:49,199 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(167) : -Abriendo una nueva sesión para el thread.
+[SCEC] 2017-04-07 11:10:49,200 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.hazPersistente(182) : >hazPersistente(critica)
+[SCEC] 2017-04-07 11:10:49,200 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:49,201 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:49,201 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+Hibernate: insert into Criticaes (Nombre, Descripcion, Hotel, Nivel, id) values (?, ?, ?, ?, ?)
+[SCEC] 2017-04-07 11:10:49,233 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:49,233 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:49,233 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:49,233 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.ordenarCriticaesPor(96) : >buscarTodos()
+[SCEC] 2017-04-07 11:10:49,233 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.ordenarCriticaesPor(103) : from Critica ORDER BY nombre
+[SCEC] 2017-04-07 11:10:49,234 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+Hibernate: select critica0_.id as id8_, critica0_.Nombre as Nombre8_, critica0_.Descripcion as Descripc3_8_, critica0_.Hotel as Hotel8_, critica0_.Nivel as Nivel8_ from Criticaes critica0_ order by critica0_.Nombre
+[SCEC] 2017-04-07 11:10:49,238 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.ordenarCriticaesPor(109) : <<<<<<<<< create query ok 
+[SCEC] 2017-04-07 11:10:49,238 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.ordenarCriticaesPor(115) : >buscarTodos() ---- list   1
+[SCEC] 2017-04-07 11:10:49,239 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.ordenarCriticaesPor(116) : >buscarTodos() ---- contenido   [edu.uag.iidis.scec.modelo.Critica@30ea8c23[
+  id=2
+  nombre=OrdenarCritica
+  descripcion=012
+  hotel=012
+  nivel=012
+]]
+[SCEC] 2017-04-07 11:10:49,239 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:49,239 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+[SCEC] 2017-04-07 11:10:49,239 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:49,240 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:49,240 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:49,240 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.buscarPorNombre(30) : >buscarPorNombre(OrdenarCritica)
+[SCEC] 2017-04-07 11:10:49,240 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+Hibernate: select critica0_.id as id8_, critica0_.Nombre as Nombre8_, critica0_.Descripcion as Descripc3_8_, critica0_.Hotel as Hotel8_, critica0_.Nivel as Nivel8_ from Criticaes critica0_ where critica0_.Nombre=?
+[SCEC] 2017-04-07 11:10:49,242 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.hazTransitorio(200) : >hazTransitorio(critica)
+[SCEC] 2017-04-07 11:10:49,242 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:49,242 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:49,242 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+Hibernate: delete from Criticaes where id=?
+[SCEC] 2017-04-07 11:10:49,277 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
+[SCEC] 2017-04-07 11:10:49,277 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(212) : -Cerrando la sesión local al thread.
+[SCEC] 2017-04-07 11:10:49,278 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:49,278 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:49,278 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:49,278 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(167) : -Abriendo una nueva sesión para el thread.
+[SCEC] 2017-04-07 11:10:49,278 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.hazPersistente(182) : >hazPersistente(critica)
+[SCEC] 2017-04-07 11:10:49,278 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:49,279 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:49,279 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+Hibernate: insert into Criticaes (Nombre, Descripcion, Hotel, Nivel, id) values (?, ?, ?, ?, ?)
+[SCEC] 2017-04-07 11:10:49,308 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:49,309 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:49,309 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:49,309 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.existeCritica(217) : >existeRol(nombreRol)
+[SCEC] 2017-04-07 11:10:49,309 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.existeCritica(238) : select nombre from Critica where nombre = :nombreExiste Critica
+[SCEC] 2017-04-07 11:10:49,310 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:49,318 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.existeCritica(244) : <<<<<<<<< create query ok 
+[SCEC] 2017-04-07 11:10:49,318 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.existeCritica(249) : <<<<<<<<< set Parameter ok antes del query list >>>>>
+Hibernate: select critica0_.Nombre as col_0_0_ from Criticaes critica0_ where critica0_.Nombre=?
+[SCEC] 2017-04-07 11:10:49,320 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.existeCritica(254) : <<<<<<<<< Result size 1
+[SCEC] 2017-04-07 11:10:49,321 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:49,321 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+[SCEC] 2017-04-07 11:10:49,322 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:49,322 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:49,323 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:49,323 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.buscarPorNombre(30) : >buscarPorNombre(Existe Critica)
+[SCEC] 2017-04-07 11:10:49,323 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+Hibernate: select critica0_.id as id8_, critica0_.Nombre as Nombre8_, critica0_.Descripcion as Descripc3_8_, critica0_.Hotel as Hotel8_, critica0_.Nivel as Nivel8_ from Criticaes critica0_ where critica0_.Nombre=?
+[SCEC] 2017-04-07 11:10:49,325 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.hazTransitorio(200) : >hazTransitorio(critica)
+[SCEC] 2017-04-07 11:10:49,326 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:49,326 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:49,326 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+Hibernate: delete from Criticaes where id=?
+[SCEC] 2017-04-07 11:10:49,366 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
+[SCEC] 2017-04-07 11:10:49,366 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(212) : -Cerrando la sesión local al thread.
+[SCEC] 2017-04-07 11:10:49,367 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:49,367 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:49,367 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:49,367 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(167) : -Abriendo una nueva sesión para el thread.
+[SCEC] 2017-04-07 11:10:49,368 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.hazPersistente(182) : >hazPersistente(critica)
+[SCEC] 2017-04-07 11:10:49,368 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:49,369 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:49,370 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+Hibernate: insert into Criticaes (Nombre, Descripcion, Hotel, Nivel, id) values (?, ?, ?, ?, ?)
+[SCEC] 2017-04-07 11:10:49,397 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:49,397 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:49,397 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:49,397 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.existeCritica(217) : >existeRol(nombreRol)
+[SCEC] 2017-04-07 11:10:49,398 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.existeCritica(238) : select nombre from Critica where nombre = :nombreExiste Critica2
+[SCEC] 2017-04-07 11:10:49,398 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:49,398 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.existeCritica(244) : <<<<<<<<< create query ok 
+[SCEC] 2017-04-07 11:10:49,398 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.existeCritica(249) : <<<<<<<<< set Parameter ok antes del query list >>>>>
+Hibernate: select critica0_.Nombre as col_0_0_ from Criticaes critica0_ where critica0_.Nombre=?
+[SCEC] 2017-04-07 11:10:49,399 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.existeCritica(254) : <<<<<<<<< Result size 0
+[SCEC] 2017-04-07 11:10:49,399 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:49,399 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+[SCEC] 2017-04-07 11:10:49,400 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:49,400 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:49,400 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:49,400 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.buscarPorNombre(30) : >buscarPorNombre(Existe Critica)
+[SCEC] 2017-04-07 11:10:49,400 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+Hibernate: select critica0_.id as id8_, critica0_.Nombre as Nombre8_, critica0_.Descripcion as Descripc3_8_, critica0_.Hotel as Hotel8_, critica0_.Nivel as Nivel8_ from Criticaes critica0_ where critica0_.Nombre=?
+[SCEC] 2017-04-07 11:10:49,401 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.hazTransitorio(200) : >hazTransitorio(critica)
+[SCEC] 2017-04-07 11:10:49,402 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:49,402 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:49,402 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+Hibernate: delete from Criticaes where id=?
+[SCEC] 2017-04-07 11:10:49,432 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
+[SCEC] 2017-04-07 11:10:49,432 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(212) : -Cerrando la sesión local al thread.
+[SCEC] 2017-04-07 11:10:49,433 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:49,433 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:49,433 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:49,433 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(167) : -Abriendo una nueva sesión para el thread.
+[SCEC] 2017-04-07 11:10:49,433 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.hazPersistente(182) : >hazPersistente(critica)
+[SCEC] 2017-04-07 11:10:49,433 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:49,433 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:49,434 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+Hibernate: insert into Criticaes (Nombre, Descripcion, Hotel, Nivel, id) values (?, ?, ?, ?, ?)
+[SCEC] 2017-04-07 11:10:49,468 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:49,469 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:49,469 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:49,469 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.buscarPorNombre(30) : >buscarPorNombre(ActualizaCritica)
+[SCEC] 2017-04-07 11:10:49,470 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+Hibernate: select critica0_.id as id8_, critica0_.Nombre as Nombre8_, critica0_.Descripcion as Descripc3_8_, critica0_.Hotel as Hotel8_, critica0_.Nivel as Nivel8_ from Criticaes critica0_ where critica0_.Nombre=?
+[SCEC] 2017-04-07 11:10:49,472 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.modificar(276) : >modificar(critica)
+edu.uag.iidis.scec.modelo.Critica@63c5efee[
+  id=5
+  nombre=ActualizaCritica
+  descripcion=012
+  hotel=012
+  nivel=012
+]
+[SCEC] 2017-04-07 11:10:49,473 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:49,474 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:49,474 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+[SCEC] 2017-04-07 11:10:49,475 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:49,475 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:49,476 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:49,476 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.buscarPorNombre(30) : >buscarPorNombre(ActualizaCritica)
+[SCEC] 2017-04-07 11:10:49,476 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+Hibernate: select critica0_.id as id8_, critica0_.Nombre as Nombre8_, critica0_.Descripcion as Descripc3_8_, critica0_.Hotel as Hotel8_, critica0_.Nivel as Nivel8_ from Criticaes critica0_ where critica0_.Nombre=?
+[SCEC] 2017-04-07 11:10:49,479 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.hazTransitorio(200) : >hazTransitorio(critica)
+[SCEC] 2017-04-07 11:10:49,479 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:49,481 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:49,482 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+Hibernate: delete from Criticaes where id=?
+[SCEC] 2017-04-07 11:10:49,523 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
+[SCEC] 2017-04-07 11:10:49,523 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(212) : -Cerrando la sesión local al thread.
+[SCEC] 2017-04-07 11:10:49,523 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:49,524 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:49,524 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:49,524 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(167) : -Abriendo una nueva sesión para el thread.
+[SCEC] 2017-04-07 11:10:49,524 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.hazPersistente(182) : >hazPersistente(critica)
+[SCEC] 2017-04-07 11:10:49,524 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:49,524 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:49,525 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+Hibernate: insert into Criticaes (Nombre, Descripcion, Hotel, Nivel, id) values (?, ?, ?, ?, ?)
+[SCEC] 2017-04-07 11:10:49,551 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:49,551 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:49,551 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:49,552 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.buscarPorNombre(30) : >buscarPorNombre(CrearCritica)
+[SCEC] 2017-04-07 11:10:49,552 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+Hibernate: select critica0_.id as id8_, critica0_.Nombre as Nombre8_, critica0_.Descripcion as Descripc3_8_, critica0_.Hotel as Hotel8_, critica0_.Nivel as Nivel8_ from Criticaes critica0_ where critica0_.Nombre=?
+[SCEC] 2017-04-07 11:10:49,553 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:49,553 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+[SCEC] 2017-04-07 11:10:49,554 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:49,554 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:49,554 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:49,555 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.buscarPorNombre(30) : >buscarPorNombre(CrearCritica)
+[SCEC] 2017-04-07 11:10:49,555 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+Hibernate: select critica0_.id as id8_, critica0_.Nombre as Nombre8_, critica0_.Descripcion as Descripc3_8_, critica0_.Hotel as Hotel8_, critica0_.Nivel as Nivel8_ from Criticaes critica0_ where critica0_.Nombre=?
+[SCEC] 2017-04-07 11:10:49,556 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.hazTransitorio(200) : >hazTransitorio(critica)
+[SCEC] 2017-04-07 11:10:49,556 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:49,556 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:49,557 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+Hibernate: delete from Criticaes where id=?
+[SCEC] 2017-04-07 11:10:49,587 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
+[SCEC] 2017-04-07 11:10:49,587 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(212) : -Cerrando la sesión local al thread.
+[SCEC] 2017-04-07 11:10:49,587 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:49,587 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:49,588 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:49,588 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(167) : -Abriendo una nueva sesión para el thread.
+[SCEC] 2017-04-07 11:10:49,588 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.hazPersistente(182) : >hazPersistente(critica)
+[SCEC] 2017-04-07 11:10:49,588 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:49,588 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:49,588 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+Hibernate: insert into Criticaes (Nombre, Descripcion, Hotel, Nivel, id) values (?, ?, ?, ?, ?)
+[SCEC] 2017-04-07 11:10:49,650 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(230) : >beginTransaction()
+[SCEC] 2017-04-07 11:10:49,650 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.beginTransaction(237) : -Iniciando una nueva transacción de base de datos en este thread.
+[SCEC] 2017-04-07 11:10:49,651 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:49,651 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.buscarPorNombre(30) : >buscarPorNombre(EliminarCritica)
+[SCEC] 2017-04-07 11:10:49,651 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+Hibernate: select critica0_.id as id8_, critica0_.Nombre as Nombre8_, critica0_.Descripcion as Descripc3_8_, critica0_.Hotel as Hotel8_, critica0_.Nivel as Nivel8_ from Criticaes critica0_ where critica0_.Nombre=?
+[SCEC] 2017-04-07 11:10:49,653 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.hazTransitorio(200) : >hazTransitorio(critica)
+[SCEC] 2017-04-07 11:10:49,653 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+[SCEC] 2017-04-07 11:10:49,654 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(256) : >commitTransaction()
+[SCEC] 2017-04-07 11:10:49,654 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.commitTransaction(264) : -Comprometiendo la transacción de este thread.
+Hibernate: delete from Criticaes where id=?
+[SCEC] 2017-04-07 11:10:49,686 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.buscarPorNombre(30) : >buscarPorNombre(EliminarCritica)
+[SCEC] 2017-04-07 11:10:49,686 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.getSession(160) : >getSession()
+Hibernate: select critica0_.id as id8_, critica0_.Nombre as Nombre8_, critica0_.Descripcion as Descripc3_8_, critica0_.Hotel as Hotel8_, critica0_.Nivel as Nivel8_ from Criticaes critica0_ where critica0_.Nombre=?
+[SCEC] 2017-04-07 11:10:49,688 DEBUG edu.uag.iidis.scec.persistencia.CriticaDAO.buscarPorNombre(46) : >buscarPorNombre(EliminarCritica)
+[SCEC] 2017-04-07 11:10:49,688 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(204) : >closeSession()
+[SCEC] 2017-04-07 11:10:49,689 DEBUG edu.uag.iidis.scec.persistencia.hibernate.HibernateUtil.closeSession(212) : -Cerrando la sesión local al thread.
+------------- ---------------- ---------------
+
+Testcase: testBuscarUsuarioPorId took 2.151 sec
+Testcase: testBuscarPorEjemplo took 0.036 sec
+Testcase: testEliminarUsuario took 0.394 sec
+Testcase: testBuscarTodos took 0.013 sec
+Testcase: testCrearUsuario took 0.071 sec
+Testcase: testVerificarRol took 0.009 sec
+Testcase: testExisteHotelE took 0.115 sec
+Testcase: testBuscarTodosE took 0.151 sec
+Testcase: testCrearHotelE took 0.081 sec
+Testcase: testExisteHotelF took 0.097 sec
+Testcase: testordenarHotelesPorE took 0.077 sec
+Testcase: testEliminarHotelE took 0.104 sec
+Testcase: testActualizarHotelE took 0.117 sec
+Testcase: testBuscarTodosE took 0.089 sec
+Testcase: testordenarCriticaesPorE took 0.08 sec
+Testcase: testExisteCriticaE took 0.088 sec
+Testcase: testExisteCriticaF took 0.065 sec
+Testcase: testActualizarCriticaE took 0.09 sec
+Testcase: testCrearCriticaE took 0.064 sec
+Testcase: testEliminarCriticaE took 0.102 sec

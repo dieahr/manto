@@ -1,0 +1,1 @@
+net.webservicex.GetCountryByCurrencyCodeResponse
