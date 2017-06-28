@@ -51,10 +51,11 @@
         <mapping resource="edu/uag/iidis/scec/modelo/Rol.hbm.xml"/>
         <mapping resource="edu/uag/iidis/scec/modelo/Ciudad.hbm.xml"/>
         <mapping resource="edu/uag/iidis/scec/modelo/Estado.hbm.xml"/>
-		<mapping resource="edu/uag/iidis/scec/modelo/Pais.hbm.xml"/>
-		<mapping resource="edu/uag/iidis/scec/modelo/Lugar.hbm.xml"/>
-    <mapping resource="edu/uag/iidis/scec/modelo/Hotel.hbm.xml"/>
-    <mapping resource="edu/uag/iidis/scec/modelo/Critica.hbm.xml"/>
+        <mapping resource="edu/uag/iidis/scec/modelo/Pais.hbm.xml"/>
+	<mapping resource="edu/uag/iidis/scec/modelo/Lugar.hbm.xml"/>
+        <mapping resource="edu/uag/iidis/scec/modelo/Hotel.hbm.xml"/>
+        <mapping resource="edu/uag/iidis/scec/modelo/Restaurante.hbm.xml"/>
+        <mapping resource="edu/uag/iidis/scec/modelo/Critica.hbm.xml"/>
         <mapping resource="edu/uag/iidis/scec/modelo/Recomendacion.hbm.xml"/>
     </session-factory>
 
