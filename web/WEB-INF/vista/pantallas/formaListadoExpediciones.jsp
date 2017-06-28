@@ -125,3 +125,64 @@ function EliminarExpedicion(strExpedicionName){
 </tbody>
 </table>
 </div>
+        
+<script type="text/javascript">
+  /*$(document).ready(function() {
+    $("#restaurante").tablesorter();
+  } );*/
+  $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+//    $('.modal').modal();
+  });
+
+  function ordenarPor( attribute ) {
+    var xmlhttp=new XMLHttpRequest();
+
+    xmlhttp.onreadystatechange = function() {
+      if(xmlhttp.status==404){
+          document.getElementById("expedicion").innerHTML="Page not found";
+      }
+      if (xmlhttp.readyState==4 && xmlhttp.status==200){
+          document.getElementById("expedicion").innerHTML=xmlhttp.responseText;
+      }
+    };
+
+    xmlhttp.open("GET","ordenarExpedicionesPor.do?nombre=" + attribute , true );
+    xmlhttp.send();
+
+    $(document).ready(function(){
+      // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+      $('.modal').modal();
+    });
+  }
+
+  function ordNombre(){
+    ordenarPor("Nombre");
+  }
+  function ordDescripcion(){
+   ordenarPor("Descripcion");
+  }
+  function ordCantidad(){
+   ordenarPor("Cantidad de Personas");
+  }
+  function ordLugar(){
+   ordenarPor("Lugar de encuentro");
+  }
+  function ordEstado(){
+   ordenarPor("Estado");
+  }
+  function ordPais(){
+   ordenarPor("Pais");
+  }
+  function ordDireccion(){
+   ordenarPor("Direccion");
+  }
+  function ordFecha(){
+   ordenarPor("Fecha");
+  }
+  function ordHora(){
+   ordenarPor("Hora");
+  }
+
+
+</script>
