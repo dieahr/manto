@@ -69,6 +69,11 @@
   }
 </script>
 
+<a href="https://www.accuweather.com/en/us/new-york-ny/10007/weather-forecast/349727" class="aw-widget-legal">
+<!--
+By accessing and/or using this code snippet, you agree to AccuWeather?s terms and conditions (in English) which can be found at https://www.accuweather.com/en/free-weather-widgets/terms and AccuWeather?s Privacy Statement (in English) which can be found at https://www.accuweather.com/en/privacy.
+-->
+</a><div id="awcc1498702855935" class="aw-widget-current"  data-locationkey="" data-unit="c" data-language="en-us" data-useip="true" data-uid="awcc1498702855935"></div><script type="text/javascript" src="https://oap.accuweather.com/launch.js"></script>
 <h1>
   <fmt:message key="formaNuevoHotel.titulo" />
 </h1>

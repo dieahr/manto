@@ -38,6 +38,8 @@
       <li><a href="solicitarListarCriticaes.do">Criticas</a></li>
       <li><a href="solicitarListarUsuarios.do">Usuarios</a></li>
       <li><a href="solicitarBuscarHoteles.do">Buscar</a></li>
+      <li><a href="solicitarClima.do">Clima</a></li>
+      
     </ul>
   </div>
 </nav>

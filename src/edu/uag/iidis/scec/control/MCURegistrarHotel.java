@@ -100,7 +100,7 @@ public final class MCURegistrarHotel
 //        File newFile =  null;
 //        if(!("").equals(fileName)){
 //
-//            newFile = new File(filePath, fileName);
+//       newFile = new File(filePath, fileName);
 //
 //            if(!newFile.exists()){
 //              FileOutputStream fos = new FileOutputStream(newFile);

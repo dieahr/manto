@@ -34,9 +34,12 @@
       <li><a href="solicitarVisualizarHoteles.do">Ver</a></li>
       <li><a href="solicitarListarHoteles.do">Hoteles</a></li>
       <li><a href="solicitarListarRestaurantees.do">Restaurantes</a></li>
+      <li><a href="solicitarListarExpediciones.do">Organizar Expedición</a></li>
       <li><a href="solicitarListarCriticaes.do">Criticas</a></li>
       <li><a href="solicitarListarUsuarios.do">Usuarios</a></li>
       <li><a href="solicitarBuscarHoteles.do">Buscar</a></li>
+      <li><a href="solicitarClima.do">Clima</a></li>
+      
     </ul>
   </div>
 </nav>

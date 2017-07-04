@@ -305,6 +305,9 @@
     <action path="/solicitarBuscarHoteles"
     forward="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formabuscarHoteles.jsp" />
     
+     <action path="/solicitarClima"
+    forward="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaClima.jsp" />
+    
      <action path="/solicitarModificarRestaurante"
                 type="edu.uag.iidis.scec.control.MCUModificarRestaurante"
                 parameter="solicitarModificarRestaurante"
