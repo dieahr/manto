@@ -25,7 +25,6 @@
     label:hover{
       height:auto;
     }
-    
     #temp{
       font-size:8rem;
       font-weight:bold;
