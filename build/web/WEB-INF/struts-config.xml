@@ -166,6 +166,26 @@
                 <forward name="exito" path="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaListadoCriticaes.jsp"/>
                 <forward name="fracaso" path="/WEB-INF/vista/pantallas/pantallaInicio.jsp"/>
             </action>
+            
+                  <action path="/solicitarListarResenas"
+                    type="edu.uag.iidis.scec.control.MCUListarResenas"
+                    parameter="solicitarListarResenas"
+                    name="formaListadoResenas"
+                    scope="request"
+                    validate="false">
+                <forward name="exito" path="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaListadoResenas.jsp"/>
+                <forward name="fracaso" path="/WEB-INF/vista/pantallas/pantallaInicio.jsp"/>
+            </action>
+            
+            <action path="/solicitarModificarResena"
+                    type="edu.uag.iidis.scec.control.MCUModificarResena"
+                    parameter="solicitarModificarResena"
+                    name="formaModificarResena"
+                    scope="request"
+                    validate="true">
+
+                <forward name="exito" path="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaModificarResena.jsp"/>
+            </action>
 
             <action path="/solicitarModificarCritica"
                     type="edu.uag.iidis.scec.control.MCUModificarCritica"

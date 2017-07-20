@@ -5,16 +5,19 @@
         <group>
             <file>file:/Users/diegohernandez/Downloads/MAntenimiento%202/MantenimientoSistemas2-noTocar/src/edu/uag/iidis/scec/modelo/Critica.java</file>
             <file>file:/Users/diegohernandez/Downloads/MAntenimiento%202/MantenimientoSistemas2-noTocar/src/edu/uag/iidis/scec/servicios/net/webservicex/GetCountries.java</file>
+            <file>file:/Users/diegohernandez/Downloads/MAntenimiento%202/MantenimientoSistemas2-noTocar/src/edu/uag/iidis/scec/vista/FormaCompleja.java</file>
+            <file>file:/Users/diegohernandez/Downloads/MAntenimiento%202/MantenimientoSistemas2-noTocar/src/edu/uag/iidis/scec/vista/FormaEliminarCritica.java</file>
             <file>file:/Users/diegohernandez/Downloads/MAntenimiento%202/MantenimientoSistemas2-noTocar/src/edu/uag/iidis/scec/servicios/net/webservicex/GetCurrenciesResponse.java</file>
             <file>file:/Users/diegohernandez/Downloads/MAntenimiento%202/MantenimientoSistemas2-noTocar/src/edu/uag/iidis/scec/servicios/ManejadorEstados.java</file>
             <file>file:/Users/diegohernandez/Downloads/MAntenimiento%202/MantenimientoSistemas2-noTocar/src/edu/uag/iidis/scec/servicios/net/webservicex/GetCountriesResponse.java</file>
             <file>file:/Users/diegohernandez/Downloads/MAntenimiento%202/MantenimientoSistemas2-noTocar/src/edu/uag/iidis/scec/modelo/Hotel.hbm.xml</file>
             <file>file:/Users/diegohernandez/Downloads/MAntenimiento%202/MantenimientoSistemas2-noTocar/src/edu/uag/iidis/scec/control/MCURegistrarLugar.java</file>
             <file>file:/Users/diegohernandez/Downloads/MAntenimiento%202/MantenimientoSistemas2-noTocar/src/edu/uag/iidis/scec/modelo/Hotel.java</file>
-            <file>file:/Users/diegohernandez/Downloads/MAntenimiento%202/MantenimientoSistemas2-noTocar/src/edu/uag/iidis/scec/control/MCURegistrarHotel.java</file>
             <file>file:/Users/diegohernandez/Downloads/MAntenimiento%202/MantenimientoSistemas2-noTocar/src/edu/uag/iidis/scec/servicios/net/webservicex/GetCurrencyByCountry.java</file>
+            <file>file:/Users/diegohernandez/Downloads/MAntenimiento%202/MantenimientoSistemas2-noTocar/web/WEB-INF/vista/pantallas/formaClima.jsp</file>
             <file>file:/Users/diegohernandez/Downloads/MAntenimiento%202/MantenimientoSistemas2-noTocar/src/edu/uag/iidis/scec/servicios/net/webservicex/GetISOCountryCodeByCountyNameResponse.java</file>
             <file>file:/Users/diegohernandez/Downloads/MAntenimiento%202/MantenimientoSistemas2-noTocar/src/edu/uag/iidis/scec/servicios/ManejadorHoteles.java</file>
+            <file>file:/Users/diegohernandez/Downloads/MAntenimiento%202/MantenimientoSistemas2-noTocar/web/WEB-INF/vista/comun/barraMenu01.jsp</file>
             <file>file:/Users/diegohernandez/Downloads/MAntenimiento%202/MantenimientoSistemas2-noTocar/src/edu/uag/iidis/scec/servicios/ManejadorCiudades.java</file>
             <file>file:/Users/diegohernandez/Downloads/MAntenimiento%202/MantenimientoSistemas2-noTocar/src/edu/uag/iidis/scec/excepciones/ExcepcionNegocio.java</file>
             <file>file:/Users/diegohernandez/Downloads/MAntenimiento%202/MantenimientoSistemas2-noTocar/src/edu/uag/iidis/scec/servicios/net/webservicex/GetCurrencies.java</file>
