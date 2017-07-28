@@ -19,13 +19,13 @@ public final class FormaListadoExpediciones
 
     private Collection expediciones;
     private int contador;
-    private String nombre;
-
+	private String nombre;
+    private String pais;
 
     public void setExpediciones(Collection expediciones) {
         this.expediciones = expediciones;
-        if (this.expediciones != null) {
-          this.contador = this.expediciones.size();
+        if (expediciones != null) {
+          this.contador = expediciones.size();
         } else
           this.contador = -1;
     }
@@ -34,22 +34,29 @@ public final class FormaListadoExpediciones
         return (this.expediciones);
     }
 
-  
     public int getContador() {
         return (this.contador);
     }
+	public String getNombre(){
+        return(this.nombre);
+    }
 
+	public void setNombre(String nombre){
+         this.nombre = nombre;
+    }
+
+    public String getPais(){
+        return(this.nombre);
+    }
+
+    public void setPais(String pais){
+         this.pais = pais;
+    }
 
     public void reset(ActionMapping mapping,
                       HttpServletRequest request) {
         contador=0;
         expediciones =null;
-    }
-    public String getNombre(){
-        return (this.nombre);
-    }
-    public void setNombre(String nombre){
-        this.nombre=nombre;
     }
 
 
