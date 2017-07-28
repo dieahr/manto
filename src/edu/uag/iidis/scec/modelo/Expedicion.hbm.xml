@@ -26,11 +26,7 @@
         <property name="cantidad"
                   column="Cantidad"
                   type="java.lang.String" />
-        
-        <property name="lugarencuentro"
-                  column="LugarEncuentro"
-                  type="java.lang.String" />
-        
+                
         <property name="estado"
                   column="Estado"
                   type="java.lang.String" />
