@@ -21,7 +21,7 @@ function EliminarExpedicion(strExpedicionName){
 </h1>
 
 <div class="fixed-action-btn">
-  <a href="#" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+  <a href="solicitarAgregarExpedicion.do" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
 </div>
 
 <div class="card" id=cardT>
@@ -38,14 +38,9 @@ function EliminarExpedicion(strExpedicionName){
             <fmt:message key="formaListadoExpediciones.etiqueta.descripcion" />
           </a>
         </th>
-        <th data-field="precio">
+        <th data-field="cantidad">
           <a class="waves-effect" onclick="ordPrecio('cantidad');">
             <fmt:message key="formaListadoExpediciones.etiqueta.cantidad" />
-          </a>
-        </th>
-        <th data-field="horario">
-          <a class="waves-effect" onclick="ordHorario('lugar');">
-            <fmt:message key="formaListadoExpediciones.etiqueta.lugar" />
           </a>
         </th>
         <th data-field="estado">
@@ -63,13 +58,13 @@ function EliminarExpedicion(strExpedicionName){
             <fmt:message key="formaListadoExpediciones.etiqueta.direccion" />
           </a>
         </th>
-        <th data-field="direccion">
-          <a class="waves-effect" onclick="ordDireccion('fecha');">
+        <th data-field="fecha">
+          <a class="waves-effect" onclick="ordFecha('fecha');">
             <fmt:message key="formaListadoExpediciones.etiqueta.fecha" />
           </a>
         </th>
-        <th data-field="direccion">
-          <a class="waves-effect" onclick="ordDireccion('hora');">
+        <th data-field="hora">
+          <a class="waves-effect" onclick="ordHora('hora');">
             <fmt:message key="formaListadoExpediciones.etiqueta.hora" />
           </a>
         </th>
@@ -80,7 +75,7 @@ function EliminarExpedicion(strExpedicionName){
     </thead>
 
     <tbody>
-      <c:forEach var="restaurante" items="${formaListadoExpediciones.expediciones}">
+      <c:forEach var="expedicion" items="${formaListadoExpediciones.expediciones}">
         <tr>
           <td>
 
@@ -89,13 +84,6 @@ function EliminarExpedicion(strExpedicionName){
             <div id="modal${expedicion.id}" class="modal">
               <div class="modal-content">
 
-                <div class="card">
-                  <div class="card-image">
-                    <img style="height: 100%; width: 100%;" src="${expedicion.imagen}">
-                    <span class="card-title">${expedicion.nombre}</span>
-                  </div>
-                </div>
-
 
               </div>
             </div>
@@ -103,7 +91,6 @@ function EliminarExpedicion(strExpedicionName){
           </td>
           <td>${expedicion.descripcion}</td>
           <td>${expedicion.cantidad}</td>
-          <td>${expedicion.lugar}</td>
           <td>${expedicion.estado}</td>
           <td>${expedicion.pais}</td>
           <td>${expedicion.direccion}</td>
@@ -111,13 +98,13 @@ function EliminarExpedicion(strExpedicionName){
           <td>${expedicion.hora}</td>
           <td>
 
-            <a href='solicitarModificarRestaurante.do?id=<c:out value="${restaurante.id}"/>&descripcion=<c:out value="${restaurante.descripcion}"/>&nombre=<c:out value="${restaurante.nombre}"/>&precio=<c:out value="${restaurante.precio}"/>&horario=<c:out value="${restaurante.horario}"/>&estado=<c:out value="${restaurante.estado}"/>&pais=<c:out value="${restaurante.pais}"/>&direccion=<c:out value="${restaurante.direccion}"/>&imagen=<c:out value="${restaurante.imagen}"/>' class="waves-effect waves-light blue btn">
+            <a href='solicitarModificarExpedicion.do?id=<c:out value="${expedicion.id}"/>&descripcion=<c:out value="${expedicion.descripcion}"/>&nombre=<c:out value="${expedicion.nombre}"/>&cantidad=<c:out value="${expedicion.cantidad}"/>&estado=<c:out value="${expedicion.estado}"/>&pais=<c:out value="${expedicion.pais}"/>&direccion=<c:out value="${expedicion.direccion}"/>&fecha=<c:out value="${expedicion.fecha}"/>&hora=<c:out value="${expedicion.hora}"/>' class="waves-effect waves-light blue btn">
             <i class="material-icons left">mode_edit</i>
-            <fmt:message key="formaListadoRestaurantees.etiqueta.modificar" />
+            <fmt:message key="formaListadoExpediciones.etiqueta.modificar" />
           </a>
-          <a href='procesarEliminarRestaurante.do?id=<c:out value="${restaurante.id}"/>' class="waves-effect waves-light red btn" onClick="javascript: return EliminarRestaurante('<c:out value="${restaurante.nombre}"/>')">
+          <a href='procesarEliminarExpedicion.do?id=<c:out value="${expedicion.id}"/>' class="waves-effect waves-light red btn" onClick="javascript: return EliminarExpedicion('<c:out value="${expedicion.nombre}"/>')">
           <i class="material-icons left">delete</i>
-          <fmt:message key="formaListadoRestaurantees.etiqueta.eliminar" />
+          <fmt:message key="formaListadoExpediciones.etiqueta.eliminar" />
         </a>
       </td>
     </tr>
@@ -164,9 +151,6 @@ function EliminarExpedicion(strExpedicionName){
   }
   function ordCantidad(){
    ordenarPor("Cantidad de Personas");
-  }
-  function ordLugar(){
-   ordenarPor("Lugar de encuentro");
   }
   function ordEstado(){
    ordenarPor("Estado");
