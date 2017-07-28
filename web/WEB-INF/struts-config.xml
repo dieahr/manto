@@ -60,6 +60,18 @@
     		<form-bean name="formaListadoHoteles"
                        type="edu.uag.iidis.scec.vista.FormaListadoHoteles">
             </form-bean>
+            <form-bean name="formaListadoExpediciones"
+                       type="edu.uag.iidis.scec.vista.FormaListadoExpediciones">
+            </form-bean>
+            <form-bean name="formaNuevoExpedicion"
+                       type="edu.uag.iidis.scec.vista.FormaNuevoExpedicion">
+            </form-bean>
+            <form-bean name="formaModificarExpedicion"
+           type="edu.uag.iidis.scec.vista.FormaModificarExpedicion">
+           </form-bean>
+           <form-bean name="formaEliminarExpedicion"
+                       type="edu.uag.iidis.scec.vista.FormaEliminarExpedicion">
+            </form-bean>
             <form-bean name="formaModificarHotel"
            type="edu.uag.iidis.scec.vista.FormaModificarHotel">
            </form-bean>
@@ -347,6 +359,26 @@
                 input="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaModificarRestaurante.jsp" >
             <forward name="exito" path="/solicitarListarRestaurantees.do" redirect="true"/>
        </action>
+       
+       <action path="/solicitarModificarExpedicion"
+                type="edu.uag.iidis.scec.control.MCUModificarExpedicion"
+                parameter="solicitarModificarExpedicion"
+                name="formaModificarExpedicion"
+                scope="request"
+                validate="true">
+
+            <forward name="exito" path="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaModificarExpedicion.jsp"/>
+        </action>
+
+        <action path="/procesarModificarExpedicion"
+                type="edu.uag.iidis.scec.control.MCUModificarExpedicion"
+                parameter="procesarModificarExpedicion"
+                name="formaModificarExpedicion"
+                scope="request"
+                validate="true"
+                input="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaModificarExpedicion.jsp" >
+            <forward name="exito" path="/solicitarListarExpediciones.do" redirect="true"/>
+       </action>
 
     <action path="/solicitarVisualizarRestaurantees"
                 type="edu.uag.iidis.scec.control.MCUListarRestaurantees"
@@ -355,6 +387,16 @@
                 scope="request"
                 validate="false">
             <forward name="exito" path="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaVerRestaurantees.jsp"/>
+            <forward name="fracaso" path="/WEB-INF/vista/pantallas/pantallaInicio.jsp"/>
+        </action>
+        
+        <action path="/solicitarVisualizarExpediciones"
+                type="edu.uag.iidis.scec.control.MCUListarExpediciones"
+                parameter="solicitarListarExpediciones"
+                name="formaListadoExpediciones"
+                scope="request"
+                validate="false">
+            <forward name="exito" path="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaVerExpediciones.jsp"/>
             <forward name="fracaso" path="/WEB-INF/vista/pantallas/pantallaInicio.jsp"/>
         </action>
 
@@ -505,6 +547,15 @@
                 validate="false">
             <forward name="exito" path="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaNuevoRestaurante.jsp"/>
         </action>
+        
+        <action path="/solicitarRegistroExpedicion"
+                type="edu.uag.iidis.scec.control.MCURegistrarExpedicion"
+                parameter="solicitarRegistroExpedicion"
+                name="formaNuevoExpedicion"
+                scope="request"
+                validate="false">
+            <forward name="exito" path="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaNuevoExpedicion.jsp"/>
+        </action>
 
         <action path="/solicitarAgregarHotel"
                 type="edu.uag.iidis.scec.control.MCURegistrarHotel"
@@ -522,6 +573,15 @@
                 scope="request"
                 validate="false">
             <forward name="exito" path="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaAgregarRestaurante.jsp"/>
+        </action>
+        
+        <action path="/solicitarAgregarExpedicion"
+                type="edu.uag.iidis.scec.control.MCURegistrarExpedicion"
+                parameter="solicitarRegistroExpedicion"
+                name="formaNuevoExpedicion"
+                scope="request"
+                validate="false">
+            <forward name="exito" path="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaAgregarExpedicion.jsp"/>
         </action>
 
 
@@ -550,6 +610,15 @@
                     scope="request"
                     validate="false">
                 <forward name="exito" path="/solicitarListarRestaurantees.do" redirect="true"/>
+            </action>
+            
+            <action path="/procesarEliminarExpedicion"
+                    type="edu.uag.iidis.scec.control.MCUEliminarExpedicion"
+                    parameter="procesarEliminarExpedicion"
+                    name="formaEliminarExpedicion"
+                    scope="request"
+                    validate="false">
+                <forward name="exito" path="/solicitarListarExpediciones.do" redirect="true"/>
             </action>
 
         <action path="/procesarEliminarEstado"
@@ -632,6 +701,16 @@
                   validate="true"
                   input="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaNuevoRestaurante.jsp" >
               <forward name="exito" path="/solicitarListarRestaurantees.do" redirect="true"/>
+         </action>
+         
+         <action path="/procesarRegistroExpedicion"
+                  type="edu.uag.iidis.scec.control.MCURegistrarExpedicion"
+                  parameter="procesarRegistroExpedicion"
+                  name="formaNuevoExpedicion"
+                  scope="request"
+                  validate="true"
+                  input="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaNuevoExpedicion.jsp" >
+              <forward name="exito" path="/solicitarListarExpediciones.do" redirect="true"/>
          </action>
 
 	   <action path="/procesarRegistroRol"
