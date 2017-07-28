@@ -9,26 +9,36 @@ import edu.uag.iidis.scec.modelo.Expedicion;
 import edu.uag.iidis.scec.excepciones.*;
 import edu.uag.iidis.scec.persistencia.ExpedicionDAO;
 import edu.uag.iidis.scec.persistencia.hibernate.*;
+import net.webservicex.*;
+import java.util.ArrayList;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
+import java.util.List;
+
+import org.dom4j.Document;
+import org.dom4j.DocumentException;
+import org.dom4j.Element;
+import org.dom4j.Node;
+import org.dom4j.io.SAXReader;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-import net.webservicex.*;
 import org.w3c.dom.NodeList;
-
 public class ManejadorExpediciones {
     private Log log = LogFactory.getLog(ManejadorExpediciones.class);
     private ExpedicionDAO expedicionDAO;
-    
-    public ManejadorExpediciones(){
+
+    public ManejadorExpediciones() {
         expedicionDAO = new ExpedicionDAO();
     }
-    
-    public Collection listarExpediciones(){
+
+
+    public Collection listarExpediciones() {
         Collection resultado;
+
         if (log.isDebugEnabled()) {
             log.debug(">guardarUsuario(usuario)");
         }
@@ -45,8 +55,31 @@ public class ManejadorExpediciones {
             HibernateUtil.closeSession();
         }
     }
-    
-    public Collection listarExpedicionesPorNombre(String nombre) {
+
+    public Collection ordenarExpedicionesPor(String attribute) {
+        Collection resultado;
+
+        if (log.isDebugEnabled()) {
+            log.debug(">guardarUsuario(usuario)");
+        }
+
+        try {
+            HibernateUtil.beginTransaction();
+            resultado = expedicionDAO.ordenarExpedicionesPor(attribute);
+            if (log.isDebugEnabled()) {
+                log.debug(">ret4rn h6te3");
+            }
+            HibernateUtil.commitTransaction();
+            return resultado;
+        } catch (ExcepcionInfraestructura e) {
+            HibernateUtil.rollbackTransaction();
+            return null;
+        } finally {
+            HibernateUtil.closeSession();
+        }
+    }
+
+	public Collection listarExpedicionesPorNombre(String nombre) {
         Collection resultado;
 
         if (log.isDebugEnabled()) {
@@ -65,7 +98,29 @@ public class ManejadorExpediciones {
             HibernateUtil.closeSession();
         }
     }
-    
+        
+        
+
+    public Collection buscaEstado(String nombre) {
+        Collection resultado;
+
+        if (log.isDebugEnabled()) {
+            log.debug(">guardarUsuario(usuario)");
+        }
+
+        try {
+            HibernateUtil.beginTransaction();
+            resultado = expedicionDAO.buscarEstado(nombre);
+            HibernateUtil.commitTransaction();
+            return resultado;
+        } catch (ExcepcionInfraestructura e) {
+            HibernateUtil.rollbackTransaction();
+            return null;
+        } finally {
+            HibernateUtil.closeSession();
+        }
+    }
+
     public void eliminarExpedicion(Long id) {
         if (log.isDebugEnabled()) {
             log.debug(">eliminarExpedicion(expedicion)");
@@ -85,8 +140,30 @@ public class ManejadorExpediciones {
         } finally {
             HibernateUtil.closeSession();
         }
+
     }
-    
+
+    //cambios
+    public Collection buscaImagen(String nombre) {
+        Collection resultado;
+
+        if (log.isDebugEnabled()) {
+            log.debug(">guardarUsuario(usuario)");
+        }
+
+        try {
+            HibernateUtil.beginTransaction();
+            resultado = expedicionDAO.buscarImagen(nombre);
+            HibernateUtil.commitTransaction();
+            return resultado;
+        } catch (ExcepcionInfraestructura e) {
+            HibernateUtil.rollbackTransaction();
+            return null;
+        } finally {
+            HibernateUtil.closeSession();
+        }
+    }
+
     public Collection getService(String pais,String path) {
         Collection<DataService> resultado=null;
         ArrayList<DataService> b =  new ArrayList<>();
@@ -101,20 +178,20 @@ public class ManejadorExpediciones {
         resultado = b;
         return resultado;
     }
-    
+
     public int crearExpedicion(Expedicion expedicion) {
 
         int resultado;
 
         if (log.isDebugEnabled()) {
-            log.debug(">guardarHotel(hotel)");
+            log.debug(">guardarExpedicion(expedicion)");
         }
 
         try {
             HibernateUtil.beginTransaction();
 
             if (expedicionDAO.existeExpedicion(expedicion.getNombre())) {
-               resultado = 1; // Excepción. El nombre de ciudad ya existe
+               resultado = 1; // ExcepciÃ³n. El nombre de ciudad ya existe
             } else {
 
                expedicionDAO.hazPersistente(expedicion);
@@ -130,19 +207,18 @@ public class ManejadorExpediciones {
             if (log.isWarnEnabled()) {
                 log.warn("<ExcepcionInfraestructura");
             }
-            resultado = 2;    // Excepción. Falla en la infraestructura
+            resultado = 2;    // ExcepciÃ³n. Falla en la infraestructura
         } finally {
             HibernateUtil.closeSession();
         }
         return resultado;
     }
-    
     private static String getCurrencyByCountry(java.lang.String countryName) {
         Country service = new net.webservicex.Country();
         CountrySoap port = service.getCountrySoap();
         return port.getCurrencyByCountry(countryName);
     }
-    
+
     public boolean modificarExpedicion(Expedicion expedicion) {
 
         boolean toReturn = false;
@@ -174,13 +250,18 @@ public class ManejadorExpediciones {
             if (this.log.isWarnEnabled()) {
 
                 this.log.warn("< ExcepcionInfraestructura");
+
             }
+
         } finally {
+
             HibernateUtil.closeSession();
+
         }
+
         return toReturn;
     }
-    
+
     public String getData(String cities,String path){
         String service ="";
         try {
@@ -209,4 +290,5 @@ public class ManejadorExpediciones {
         }
         return service;
     }
+
 }
