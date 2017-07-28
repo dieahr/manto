@@ -11,7 +11,6 @@ public class Expedicion extends ClaseBase
     private String nombre;
     private String descripcion;
     private String cantidad;
-    private String lugarencuentro;
     private String estado;
     private String pais;
     private String direccion;
@@ -25,11 +24,10 @@ public class Expedicion extends ClaseBase
         this.id = id;
     }
 
-    public Expedicion(String nombre, String descripcion,String cantidad,String lugarencuentro,String estado, String fecha, String pais, String direccion, String hora){
+    public Expedicion(String nombre, String descripcion,String cantidad,String estado,String pais,String direccion,String fecha,String hora){
         this.nombre=nombre;
         this.descripcion=descripcion;
 	this.cantidad=cantidad;
-	this.lugarencuentro=lugarencuentro;
 	this.estado=estado;
         this.pais = pais;
         this.direccion = direccion;
@@ -68,9 +66,6 @@ public class Expedicion extends ClaseBase
     public String getCantidad() {
         return this.cantidad;
     }
-    public String getLugarEncuentro() {
-        return this.lugarencuentro;
-    }
     public String getEstado() {
         return this.estado;
     }
@@ -100,9 +95,6 @@ public class Expedicion extends ClaseBase
     public void setCantidad(String cantidad) {
         this.cantidad = cantidad;
     }
-    public void setLugarEncuentro(String lugarencuentro) {
-        this.lugarencuentro = lugarencuentro;
-    }
     public void setEstado(String estado) {
         this.estado = estado;
     }
@@ -115,7 +107,7 @@ public class Expedicion extends ClaseBase
     public void setFecha(String fecha) {
         this.fecha = fecha;
     }
-    public void serHora(String hora){
+    public void setHora(String hora){
         this.hora = hora;
     }
     /**
