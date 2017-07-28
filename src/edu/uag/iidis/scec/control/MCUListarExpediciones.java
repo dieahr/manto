@@ -18,6 +18,7 @@ import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 import org.apache.struts.actions.MappingDispatchAction;
 
+import net.webservicex.*;
 
 
 public final class MCUListarExpediciones
@@ -37,18 +38,18 @@ public final class MCUListarExpediciones
             log.debug(">solicitarListarExpediciones");
         }
 
-        // Verifica si la acci�n fue cancelada por el usuario
+        // Verifica si la acción fue cancelada por el usuario
         if (isCancelled(request)) {
             if (log.isDebugEnabled()) {
-                log.debug("<La acci�n fue cancelada");
+                log.debug("<La acción fue cancelada");
             }
             return (mapping.findForward("cancelar"));
         }
 
         FormaListadoExpediciones forma = (FormaListadoExpediciones)form;
 
-        ManejadorExpediciones me = new ManejadorExpediciones();
-        Collection resultado = me.listarExpediciones();
+        ManejadorExpediciones mr = new ManejadorExpediciones();
+        Collection resultado = mr.listarExpediciones();
 
         ActionMessages errores = new ActionMessages();
         if (resultado != null) {
@@ -57,16 +58,156 @@ public final class MCUListarExpediciones
                     new ActionMessage("errors.registroVacio"));
                 saveErrors(request, errores);
             } else {
-                forma.setExpediciones(resultado );
+                forma.setExpediciones(resultado);
             }
             return (mapping.findForward("exito"));
         } else {
-            log.error("Ocurri� un error de infraestructura");
+            log.error("Ocurrió un error de infraestructura");
             errores.add(ActionMessages.GLOBAL_MESSAGE,
-                        new ActionMessage("errors.infraestructura"));                
+                        new ActionMessage("errors.infraestructura"));
             saveErrors(request, errores);
             return ( mapping.findForward("fracaso") );
         }
 
     }
+	 public ActionForward buscarExpedicion(
+                ActionMapping mapping,
+                ActionForm form,
+                HttpServletRequest request,
+                HttpServletResponse response)
+            throws Exception {
+
+        if (log.isDebugEnabled()) {
+            log.debug(">solicitarListarExpediciones");
+        }
+
+        // Verifica si la acción fue cancelada por el usuario
+        if (isCancelled(request)) {
+            if (log.isDebugEnabled()) {
+                log.debug("<La acción fue cancelada");
+            }
+            return (mapping.findForward("cancelar"));
+        }
+
+        FormaListadoExpediciones forma = (FormaListadoExpediciones)form;
+
+        ManejadorExpediciones mr = new ManejadorExpediciones();
+        Collection resultado = mr.listarExpedicionesPorNombre(forma.getNombre());
+
+        ActionMessages errores = new ActionMessages();
+        if (resultado != null) {
+            if ( resultado.isEmpty() ) {
+                errores.add(ActionMessages.GLOBAL_MESSAGE,
+                    new ActionMessage("errors.registroVacio"));
+                saveErrors(request, errores);
+            } else {
+                forma.setExpediciones(resultado);
+            }
+            return (mapping.findForward("exito"));
+        } else {
+            log.error("Ocurrió un error de infraestructura");
+            errores.add(ActionMessages.GLOBAL_MESSAGE,
+                        new ActionMessage("errors.infraestructura"));
+            saveErrors(request, errores);
+            return ( mapping.findForward("fracaso") );
+        }
+
+    }
+
+    //cambios
+
+    public ActionForward buscarEstado(
+                ActionMapping mapping,
+                ActionForm form,
+                HttpServletRequest request,
+                HttpServletResponse response)
+            throws Exception {
+
+        if (log.isDebugEnabled()) {
+            log.debug(">solicitarListarExpediciones");
+        }
+
+        // Verifica si la acción fue cancelada por el usuario
+        if (isCancelled(request)) {
+            if (log.isDebugEnabled()) {
+                log.debug("<La acción fue cancelada");
+            }
+            return (mapping.findForward("cancelar"));
+        }
+
+        FormaListadoExpediciones forma = (FormaListadoExpediciones)form;
+
+        ManejadorExpediciones mr = new ManejadorExpediciones();
+        Collection resultado = mr.buscaEstado(forma.getNombre());
+
+        ActionMessages errores = new ActionMessages();
+        if (resultado != null) {
+            if ( resultado.isEmpty() ) {
+                errores.add(ActionMessages.GLOBAL_MESSAGE,
+                    new ActionMessage("errors.registroVacio"));
+                saveErrors(request, errores);
+            } else {
+                forma.setExpediciones(resultado);
+            }
+            return (mapping.findForward("exito"));
+        } else {
+            log.error("Ocurrió un error de infraestructura");
+            errores.add(ActionMessages.GLOBAL_MESSAGE,
+                        new ActionMessage("errors.infraestructura"));
+            saveErrors(request, errores);
+            return ( mapping.findForward("fracaso") );
+        }
+
+    }
+
+    public ActionForward getService(
+                ActionMapping mapping,
+                ActionForm form,
+                HttpServletRequest request,
+                HttpServletResponse response)
+            throws Exception {
+
+        if (log.isDebugEnabled()) {
+            log.debug(">solicitarListarExpediciones");
+        }
+
+        // Verifica si la acción fue cancelada por el usuario
+        if (isCancelled(request)) {
+            if (log.isDebugEnabled()) {
+                log.debug("<La acción fue cancelada");
+            }
+            return (mapping.findForward("cancelar"));
+        }
+
+        FormaListadoExpediciones forma = (FormaListadoExpediciones)form;
+        ManejadorExpediciones mr = new ManejadorExpediciones();
+        log.debug(forma.getPais());
+        String path = getServlet().getServletContext().getRealPath("/");
+        Collection resultado=mr.getService(forma.getPais(),path);
+
+
+        ActionMessages errores = new ActionMessages();
+        if (resultado != null) {
+            if ( resultado.isEmpty() ) {
+                errores.add(ActionMessages.GLOBAL_MESSAGE,
+                    new ActionMessage("errors.registroVacio"));
+                saveErrors(request, errores);
+            } else {
+                forma.setExpediciones(resultado);
+            }
+            return (mapping.findForward("exito"));
+        } else {
+            log.error("Ocurrió un error de infraestructura");
+            errores.add(ActionMessages.GLOBAL_MESSAGE,
+                        new ActionMessage("errors.infraestructura"));
+            saveErrors(request, errores);
+            return ( mapping.findForward("fracaso") );
+        }
+
+    }
+
+
+
+
+
 }
