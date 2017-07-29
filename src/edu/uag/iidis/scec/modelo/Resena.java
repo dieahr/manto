@@ -82,7 +82,7 @@ public class Resena extends ClaseBase
 	public void setEstado(String estado) {
         this.estado = estado;
     }
-	public void setPuntuacion(String puntuacionl) {
+	public void setPuntuacion(String puntuacion) {
         this.puntuacion = puntuacion;
     }
     /**
