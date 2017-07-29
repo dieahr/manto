@@ -7,7 +7,6 @@ import org.apache.commons.logging.LogFactory;
 
 import edu.uag.iidis.scec.modelo.Resena;
 import edu.uag.iidis.scec.excepciones.*;
-//import edu.uag.iidis.scec.persistencia.ResenaDAO;
 import edu.uag.iidis.scec.persistencia.ResenaDAO;
 import edu.uag.iidis.scec.persistencia.hibernate.*;
 import net.webservicex.*;
