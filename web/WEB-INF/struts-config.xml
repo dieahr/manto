@@ -99,14 +99,26 @@
            <form-bean name="formaEliminarCritica"
                           type="edu.uag.iidis.scec.vista.FormaEliminarCritica">
                </form-bean>
+               <form-bean name="formaEliminarResena"
+                          type="edu.uag.iidis.scec.vista.FormaEliminarResena">
+               </form-bean>
        		<form-bean name="formaNuevoCritica"
                           type="edu.uag.iidis.scec.vista.FormaNuevoCritica">
+               </form-bean>
+               <form-bean name="formaNuevoResena"
+                          type="edu.uag.iidis.scec.vista.FormaNuevoResena">
                </form-bean>
        		<form-bean name="formaListadoCriticaes"
                           type="edu.uag.iidis.scec.vista.FormaListadoCriticaes">
                </form-bean>
+               <form-bean name="formaListadoResenas"
+                          type="edu.uag.iidis.scec.vista.FormaListadoResenas">
+               </form-bean>
                <form-bean name="formaModificarCritica"
               type="edu.uag.iidis.scec.vista.FormaModificarCritica">
+              </form-bean>
+              <form-bean name="formaModificarResena"
+              type="edu.uag.iidis.scec.vista.FormaModificarResena">
               </form-bean>
     </form-beans>
 
@@ -218,6 +230,16 @@
                     <forward name="exito" path="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaAgregarCritica.jsp"/>
                     <forward name="fracaso" path="/WEB-INF/vista/pantallas/pantallaInicio.jsp"/>
                 </action>
+                
+                <action path="/solicitarAgregarResena"
+                        type="edu.uag.iidis.scec.control.MCUListarResenas"
+                        parameter="solicitarListarResenas"
+                        name="formaListadoResenas"
+                        scope="request"
+                        validate="false">
+                    <forward name="exito" path="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaAgregarResena.jsp"/>
+                    <forward name="fracaso" path="/WEB-INF/vista/pantallas/pantallaInicio.jsp"/>
+                </action>
 
             <action path="/procesarEliminarCritica"
                         type="edu.uag.iidis.scec.control.MCUEliminarCritica"
@@ -226,6 +248,15 @@
                         scope="request"
                         validate="false">
                     <forward name="exito" path="/solicitarListarCriticaes.do" redirect="true"/>
+                </action>
+                
+                <action path="/procesarEliminarResena"
+                        type="edu.uag.iidis.scec.control.MCUEliminarResena"
+                        parameter="procesarEliminarResena"
+                        name="formaEliminarResena"
+                        scope="request"
+                        validate="false">
+                    <forward name="exito" path="/solicitarListarResenas.do" redirect="true"/>
                 </action>
 
                 <action path="/procesarEliminarUsuario"
@@ -246,6 +277,16 @@
                            input="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaNuevoCritica.jsp" >
                        <forward name="exito" path="/solicitarListarCriticaes.do" redirect="true"/>
                   </action>
+                  
+                  <action path="/procesarRegistroResena"
+                           type="edu.uag.iidis.scec.control.MCURegistrarResena"
+                           parameter="procesarRegistroResena"
+                           name="formaNuevoResena"
+                           scope="request"
+                           validate="true"
+                           input="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaNuevoResena.jsp" >
+                       <forward name="exito" path="/solicitarListarCriticaes.do" redirect="true"/>
+                  </action>
 
                   <action path="/ordenarCriticaesPor"
                           type="edu.uag.iidis.scec.control.MCUOrdenarCriticaPor"
@@ -256,6 +297,16 @@
 
                       <forward name="exito" path="/WEB-INF/vista/pantallas/formaOrdenarCritica.jsp"/>
                   </action>
+                  
+                  <action path="/ordenarResenasPor"
+                          type="edu.uag.iidis.scec.control.MCUOrdenarResenaPor"
+                          parameter="SolicitarOrdenarResena"
+                          name="formaListadoResenas"
+                          scope="request"
+                          validate="true">
+
+                      <forward name="exito" path="/WEB-INF/vista/pantallas/formaOrdenarResena.jsp"/>
+                  </action>
 
                   <action path="/procesarModificarCritica"
                           type="edu.uag.iidis.scec.control.MCUModificarCritica"
@@ -264,6 +315,16 @@
                           scope="request"
                           validate="true"
                           input="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaModificarCritica.jsp" >
+                      <forward name="exito" path="/solicitarListarCriticaes.do" redirect="true"/>
+                 </action>
+                 
+                 <action path="/procesarModificarResena"
+                          type="edu.uag.iidis.scec.control.MCUModificarResena"
+                          parameter="procesarModificarResena"
+                          name="formaModificarResena"
+                          scope="request"
+                          validate="true"
+                          input="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaModificarResena.jsp" >
                       <forward name="exito" path="/solicitarListarCriticaes.do" redirect="true"/>
                  </action>
 
