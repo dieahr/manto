@@ -21,7 +21,7 @@ function EliminarResena(strResenaName){
 </h1>
 
 <div class="fixed-action-btn">
-  <a href="#" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+  <a href="solicitarAgregarResena.do" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
 </div>
 
 <div class="card" id=cardT>
@@ -55,7 +55,7 @@ function EliminarResena(strResenaName){
     </thead>
 
     <tbody>
-      <c:forEach var="resena" items="${formaListadoResena.resena}">
+      <c:forEach var="resena" items="${formaListadoResenas.resenas}">
         <tr>
           <td>
 
@@ -81,13 +81,13 @@ function EliminarResena(strResenaName){
           <td>${resena.puntuacion}</td>
           <td>
 
-            <a href='solicitarModificarCritica.do?id=<c:out value="${critica.id}"/>&descripcion=<c:out value="${critica.descripcion}"/>&nombre=<c:out value="${critica.nombre}"/>&hotel=<c:out value="${critica.hotel}"/>&nivel=<c:out value="${critica.nivel}"/>' class="waves-effect waves-light blue btn">
+            <a href='solicitarModificarResena.do?id=<c:out value="${resena.id}"/>&descripcion=<c:out value="${resena.descripcion}"/>&nombre=<c:out value="${resena.nombre}"/>&estado=<c:out value="${resena.estado}"/>&puntuacion=<c:out value="${resena.puntuacion}"/>' class="waves-effect waves-light blue btn">
             <i class="material-icons left">mode_edit</i>
-            <fmt:message key="formaListadoCriticaes.etiqueta.modificar" />
+            <fmt:message key="formaListadoResena.etiqueta.modificar" />
           </a>
-          <a href='procesarEliminarCritica.do?id=<c:out value="${critica.id}"/>' class="waves-effect waves-light red btn" onClick="javascript: return EliminarCritica('<c:out value="${critica.nombre}"/>')">
+          <a href='procesarEliminarResena.do?id=<c:out value="${resena.id}"/>' class="waves-effect waves-light red btn" onClick="javascript: return EliminarResena('<c:out value="${resena.nombre}"/>')">
           <i class="material-icons left">delete</i>
-          <fmt:message key="formaListadoCriticaes.etiqueta.eliminar" />
+          <fmt:message key="formaListadoResena.etiqueta.eliminar" />
         </a>
       </td>
     </tr>
@@ -117,7 +117,7 @@ function EliminarResena(strResenaName){
       }
     };
 
-    xmlhttp.open("GET","ordenarCriticaesPor.do?nombre=" + attribute , true );
+    xmlhttp.open("GET","ordenarResenasPor.do?nombre=" + attribute , true );
     xmlhttp.send();
 
     $(document).ready(function(){
