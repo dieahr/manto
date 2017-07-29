@@ -15,12 +15,12 @@
         </a>
       </th>
       <th data-field="estado">
-        <a class="waves-effect" onclick="ordHotel('hotel');">
+        <a class="waves-effect" onclick="ordEstado('estado');">
           <fmt:message key="formaListadoResena.etiqueta.estado" />
         </a>
       </th>
       <th data-field="puntuacion">
-        <a class="waves-effect" onclick="ordNivel('nivel');">
+        <a class="waves-effect" onclick="ordPuntuacion('puntuacion');">
           <fmt:message key="formaListadoResena.etiqueta.puntuacion" />
         </a>
       </th>
@@ -31,7 +31,7 @@
   </thead>
 
   <tbody>
-    <c:forEach var="resena" items="${formaListadoResena.resenas}">
+    <c:forEach var="resena" items="${formaListadoResenas.resenas}">
       <tr>
         <td>
 
