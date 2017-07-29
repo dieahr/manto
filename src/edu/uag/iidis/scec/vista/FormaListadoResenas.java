@@ -29,7 +29,7 @@ public final class FormaListadoResenas
           this.contador = -1;
     }
 
-    public Collection getResenass() {
+    public Collection getResenas() {
         return (this.resenas);
     }
 
