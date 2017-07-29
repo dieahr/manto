@@ -33,7 +33,7 @@ public class ResenaDAO {
         Resena resena = null;
         try {
             List resenas = HibernateUtil.getSession()
-                    .createQuery("from Critica where nombre=:nombre")
+                    .createQuery("from Resena where nombre=:nombre")
                     .setString("nombre", nombre)
                     .list();
 
@@ -97,7 +97,7 @@ public class ResenaDAO {
         }
 
         try {
-          String hql = "from Critica ORDER BY " + attribute;
+          String hql = "from Resena ORDER BY " + attribute;
 
            if (log.isDebugEnabled()) {
                log.debug(hql );
@@ -232,7 +232,7 @@ public class ResenaDAO {
  //                          .next()).intValue();
 // de acuerdo al nuevo formato
 
-            String hql = "select nombre from Critica where nombre = :nombre";
+            String hql = "select nombre from Resena where nombre = :nombre";
 
              if (log.isDebugEnabled()) {
                  log.debug(hql + nombreResena);
@@ -307,7 +307,7 @@ public class ResenaDAO {
 
         try {
 
-            String hql = "from Critica where nombre like '"+nombreResena+"%'";
+            String hql = "from Resena where nombre like '"+nombreResena+"%'";
 
              if (log.isDebugEnabled()) {
                  log.debug(hql + nombreResena);
