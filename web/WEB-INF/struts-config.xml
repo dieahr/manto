@@ -325,7 +325,7 @@
                           scope="request"
                           validate="true"
                           input="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaModificarResena.jsp" >
-                      <forward name="exito" path="/solicitarListarCriticaes.do" redirect="true"/>
+                      <forward name="exito" path="/solicitarListarResenas.do" redirect="true"/>
                  </action>
 
 
