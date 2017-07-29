@@ -48,8 +48,8 @@ public final class MCUListarResenas
 
         FormaListadoResenas forma = (FormaListadoResenas)form;
 
-        ManejadorCriticaes mr = new ManejadorCriticaes();
-        Collection resultado = mr.listarCriticaes();
+        ManejadorResenas mr = new ManejadorResenas();
+        Collection resultado = mr.listarResenas();
 
         ActionMessages errores = new ActionMessages();
         if (resultado != null) {
