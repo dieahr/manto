@@ -40,7 +40,7 @@
       <li><a href="solicitarListarUsuarios.do">Usuarios</a></li>
       <li><a href="solicitarBuscarHoteles.do">Buscar</a></li>
       <li><a href="solicitarClima.do">Clima</a></li>
-      
+      <li><a href="solicitarImagen.do">Imagenes</a></li>
     </ul>
   </div>
 </nav>
