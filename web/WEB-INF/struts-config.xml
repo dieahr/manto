@@ -400,6 +400,9 @@
     
      <action path="/solicitarClima"
     forward="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaClima.jsp" />
+     
+     <action path="/solicitarImagen"
+    forward="/WEB-INF/vista/pantallas/plantilla01.jsp?c=formaImagen.jsp" />
     
      <action path="/solicitarModificarRestaurante"
                 type="edu.uag.iidis.scec.control.MCUModificarRestaurante"
