@@ -22,6 +22,7 @@ public class AllTests extends TestCase {
         suite.addTest(CriticaDAOTest.suite());
         suite.addTest(RestauranteDAOTest.suite());
         suite.addTest(ExpedicionDAOTest.suite());
+        suite.addTest(ResenaDAOTest.suite());
         
 
         return suite;
