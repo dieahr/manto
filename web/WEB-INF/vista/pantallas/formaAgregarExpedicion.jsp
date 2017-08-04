@@ -6,9 +6,16 @@
   div.card{
     margin: 50px;
   }
+  #txtCity{
+      width: 100px;
+  }
+  #txtCountry{
+      width: 100px;
+  }
 </style>
 
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrXf9CxNYGJnAoO1odTbpFBHYAONeIEKg&callback=initMap" async defer ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
   <script>
   var geocoder;
   var infowindow;
@@ -207,3 +214,36 @@
   </div>
 </div>
 </div>
+    
+    <script type="text/javascript">
+    // Procesar resultados del webservice
+    var APPIDkey = "2b92ac90c161a8b52a86175509113de9";
+    $(document).ready(function(){
+                $("#btnGetWeather").click(function(){
+                    var requestData = $("#txtCity").val() + "," + $("#txtCountry").val();
+                    var resultElement = $("#resultDiv");
+                    $.ajax({
+                        url: "http://api.openweathermap.org/data/2.5/weather",
+                        method: "get",
+                        data: {q: requestData, APPID: APPIDkey},
+                        dataType: "json",
+                        success: function(data){
+                            resultElement.html("Clima: " + data.weather[0].main + "<br>" + "Descripcion: " + data.weather[0].description);
+                        }
+                    });
+                });
+            });
+  </script>
+
+
+            <label>Ciudad:</label>
+            <input type="text" id="txtCity" />
+            <label>Pais:</label>
+            <input type="text" id="txtCountry" />
+            <br><br>
+        <input type="button" id="btnGetWeather" value="Obtener el clima local" class="waves-effect waves-light btn">
+        <br><br>
+        <div id="resultDiv">
+            
+        </div>
+        <br><br>
