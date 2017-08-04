@@ -6,7 +6,7 @@
             .cuadro{
                 display: inline-block;
                 vertical-align: top;
-                width: 300px;
+                width: 250px;
             }
         </style>
     </head>
