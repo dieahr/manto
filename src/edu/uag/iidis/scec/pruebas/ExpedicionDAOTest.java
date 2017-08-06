@@ -60,10 +60,10 @@ public class ExpedicionDAOTest extends TestCase{
     }
 
     /*
-    public void testCrearHotelF() throws Exception {
+    public void testCrearExpedicionF() throws Exception {
         //Falla porque la placa esta en BD
-        HotelDAO dao = new HotelDAO();
-        Hotel hotel = new Hotel(
+        ExpedicionDAO dao = new ExpedicionDAO();
+        Expedicion expedicion = new Expedicion(
             "003", 
             "003",
             "003",
@@ -76,10 +76,10 @@ public class ExpedicionDAOTest extends TestCase{
 
         HibernateUtil.beginTransaction();
         try {
-            dao.hazPersistente(hotel);
+            dao.hazPersistente(expedicion);
             HibernateUtil.commitTransaction();
 
-            assertTrue(hotel.getId() != null);
+            assertTrue(expedicion.getId() != null);
         } catch (Exception e) {
             HibernateUtil.rollbackTransaction();
             throw e;
@@ -137,13 +137,13 @@ public class ExpedicionDAOTest extends TestCase{
             
     }
     /*
-    public void testActualizarHotelF() throws Exception {
+    public void testActualizarExpedicionF() throws Exception {
 
 
 
-        HotelDAO dao = new HotelDAO();
-        Hotel hotel = new Hotel(
-            "ActualizaHotel", 
+        ExpedicionDAO dao = new ExpedicionDAO();
+        Expedicion expedicion = new Expedicion(
+            "ActualizaExpedicion", 
             "012",
             "012",
             "012",
@@ -155,23 +155,23 @@ public class ExpedicionDAOTest extends TestCase{
         try {
 
             HibernateUtil.beginTransaction();
-            dao.hazPersistente(hotel);
+            dao.hazPersistente(expedicion);
             HibernateUtil.commitTransaction();
 
 
             HibernateUtil.beginTransaction();
-            Hotel hotelB = dao.buscarPorNombre("ActualizaHotel");
-            hotelB.setId( Long.valueOf(0) );
-            Boolean a = dao.modificar(hotelB);
+            Expedicion expedicionB = dao.buscarPorNombre("ActualizaExpedicion");
+            expedicionB.setId( Long.valueOf(0) );
+            Boolean a = dao.modificar(expedicionB);
             assertTrue(! a);
             HibernateUtil.commitTransaction();
 
 
 
             HibernateUtil.beginTransaction();
-            Hotel hotel2 = dao.buscarPorNombre("ActualizaHotel");
-            if (hotel2 != null) {
-              dao.hazTransitorio(hotel2);
+            Expedicion expedicion2 = dao.buscarPorNombre("ActualizaExpedicion");
+            if (expedicion2 != null) {
+              dao.hazTransitorio(expedicion2);
             }
             HibernateUtil.commitTransaction();
 
@@ -231,7 +231,7 @@ public class ExpedicionDAOTest extends TestCase{
     /*
     public void testBuscarTodosF() throws Exception {
 
-        HotelDAO dao = new HotelDAO();
+        ExpedicionDAO dao = new ExpedicionDAO();
 
         HibernateUtil.beginTransaction();
         try {
@@ -375,17 +375,17 @@ public class ExpedicionDAOTest extends TestCase{
         }
     }
     /*
-    public void testEliminarHotelF() throws Exception {
+    public void testEliminarExpedicionF() throws Exception {
 
-        HotelDAO dao = new HotelDAO();
-        Hotel hotelB = dao.buscarPorId(Long.valueOf(0), true);
+        ExpedicionDAO dao = new ExpedicionDAO();
+        Expedicion expedicionB = dao.buscarPorId(Long.valueOf(0), true);
 
         HibernateUtil.beginTransaction();
         try {
-             dao.hazTransitorio(hotelB);
+             dao.hazTransitorio(expedicionB);
             HibernateUtil.commitTransaction();
 
-            assertTrue(hotelB == null);
+            assertTrue(expedicionB == null);
 
         } catch (Exception e) {
             HibernateUtil.rollbackTransaction();
@@ -438,16 +438,16 @@ public class ExpedicionDAOTest extends TestCase{
     }
 
     /*
-    public void testordenarHotelesPorF() throws Exception {
+    public void testordenarExpedicionesPorF() throws Exception {
 
-        HotelDAO dao = new HotelDAO();
-        //Hotel hotel = new Hotel("Aaaa00000","automovil","1999","Peugeut","OIUP2U3","Blanco");
+        ExpedicionDAO dao = new ExpedicionDAO();
+        //Expedicion expedicion = new Expedicion("Aaaa00000","automovil","1999","Peugeut","OIUP2U3","Blanco");
         HibernateUtil.beginTransaction();
         try {
-//             dao.hazPersistente(hotel);
-            Collection resultado = dao.ordenarHotelesPor("nombre");
+//             dao.hazPersistente(expedicion);
+            Collection resultado = dao.ordenarExpedicionesPor("nombre");
             HibernateUtil.commitTransaction();
-            Hotel aux = (Hotel)resultado.iterator().next();
+            Expedicion aux = (Expedicion)resultado.iterator().next();
 
         } catch (Exception e) {
             HibernateUtil.rollbackTransaction();
